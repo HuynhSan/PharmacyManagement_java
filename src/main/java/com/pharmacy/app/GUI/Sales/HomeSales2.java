@@ -113,29 +113,30 @@ public class HomeSales2 extends javax.swing.JPanel {
         jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 10));
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel8.setPreferredSize(new java.awt.Dimension(430, 40));
+        jPanel8.setPreferredSize(new java.awt.Dimension(500, 40));
         jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 0));
 
+        cbxAll.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxAll.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Active", "IsActive" }));
         cbxAll.setPreferredSize(new java.awt.Dimension(80, 35));
         jPanel8.add(cbxAll);
 
+        txtSearch.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         txtSearch.setText("Tìm kiếm thuốc");
         txtSearch.setMinimumSize(new java.awt.Dimension(80, 30));
-        txtSearch.setPreferredSize(new java.awt.Dimension(250, 35));
+        txtSearch.setPreferredSize(new java.awt.Dimension(400, 35));
         jPanel8.add(txtSearch);
 
         jPanel4.add(jPanel8);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setPreferredSize(new java.awt.Dimension(370, 40));
+        jPanel3.setPreferredSize(new java.awt.Dimension(300, 40));
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         btnAddMedicineToCart.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnAddMedicineToCart.setText("Thêm thuốc");
-        btnAddMedicineToCart.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnAddMedicineToCart.setMargin(new java.awt.Insets(2, 10, 3, 10));
-        btnAddMedicineToCart.setPreferredSize(new java.awt.Dimension(100, 30));
+        btnAddMedicineToCart.setPreferredSize(new java.awt.Dimension(100, 35));
         btnAddMedicineToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddMedicineToCartActionPerformed(evt);
@@ -145,14 +146,14 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         btnRefresh.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRefresh.setText("Refresh");
-        btnRefresh.setPreferredSize(new java.awt.Dimension(80, 30));
+        btnRefresh.setPreferredSize(new java.awt.Dimension(80, 35));
         jPanel3.add(btnRefresh);
 
         jPanel4.add(jPanel3);
 
         jPanel1.add(jPanel4);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Danh sách thuốc");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -203,7 +204,7 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane2);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Giỏ hàng");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -380,7 +381,7 @@ public class HomeSales2 extends javax.swing.JPanel {
         txtSubtotal.setEnabled(false);
         jPanel15.add(txtSubtotal);
 
-        btnPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnPayment.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPayment.setText("Thanh toán");
         btnPayment.setMargin(new java.awt.Insets(2, 10, 3, 10));
         btnPayment.setMaximumSize(new java.awt.Dimension(325689, 326589));
@@ -408,21 +409,22 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Bán hàng", jScrollPane1);
 
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setMaximumSize(new java.awt.Dimension(326589, 326589));
         jPanel9.setMinimumSize(new java.awt.Dimension(0, 0));
-        jPanel9.setPreferredSize(new java.awt.Dimension(1200, 750));
-        jPanel9.setLayout(new java.awt.BorderLayout());
+        jPanel9.setPreferredSize(new java.awt.Dimension(1250, 750));
+        jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 5));
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setMaximumSize(new java.awt.Dimension(800, 50));
         jPanel10.setMinimumSize(new java.awt.Dimension(800, 54));
-        jPanel10.setPreferredSize(new java.awt.Dimension(800, 70));
-        jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 15));
+        jPanel10.setPreferredSize(new java.awt.Dimension(1250, 70));
+        jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 10));
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
         jPanel16.setMinimumSize(new java.awt.Dimension(400, 40));
-        jPanel16.setPreferredSize(new java.awt.Dimension(800, 70));
-        jPanel16.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 10));
+        jPanel16.setPreferredSize(new java.awt.Dimension(780, 70));
+        jPanel16.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 15, 10));
 
         cbxAll1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxAll1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Active", "IsActive" }));
@@ -445,7 +447,7 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
         jPanel17.setMinimumSize(new java.awt.Dimension(0, 0));
-        jPanel17.setPreferredSize(new java.awt.Dimension(400, 70));
+        jPanel17.setPreferredSize(new java.awt.Dimension(450, 70));
         jPanel17.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 10));
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -461,14 +463,15 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jPanel10.add(jPanel17);
 
-        jPanel9.add(jPanel10, java.awt.BorderLayout.PAGE_START);
+        jPanel9.add(jPanel10);
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setMinimumSize(new java.awt.Dimension(800, 550));
-        jPanel18.setPreferredSize(new java.awt.Dimension(1200, 550));
+        jPanel18.setPreferredSize(new java.awt.Dimension(1250, 550));
+        jPanel18.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 5));
 
         jScrollPane3.setMinimumSize(new java.awt.Dimension(0, 0));
-        jScrollPane3.setPreferredSize(new java.awt.Dimension(1180, 600));
+        jScrollPane3.setPreferredSize(new java.awt.Dimension(1210, 600));
 
         tblPromo1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tblPromo1.setModel(new javax.swing.table.DefaultTableModel(
@@ -492,7 +495,7 @@ public class HomeSales2 extends javax.swing.JPanel {
         });
         tblPromo1.setMaximumSize(new java.awt.Dimension(325689, 326589));
         tblPromo1.setMinimumSize(new java.awt.Dimension(0, 0));
-        tblPromo1.setPreferredSize(new java.awt.Dimension(1180, 700));
+        tblPromo1.setPreferredSize(new java.awt.Dimension(1230, 700));
         tblPromo1.setRowHeight(30);
         tblPromo1.setShowGrid(true);
         tblPromo1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -505,7 +508,7 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jPanel18.add(jScrollPane3);
 
-        jPanel9.add(jPanel18, java.awt.BorderLayout.CENTER);
+        jPanel9.add(jPanel18);
 
         jTabbedPane1.addTab("Hóa đơn", jPanel9);
 
