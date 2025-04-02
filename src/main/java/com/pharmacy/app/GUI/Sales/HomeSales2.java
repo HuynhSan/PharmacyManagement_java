@@ -5,6 +5,8 @@
 package com.pharmacy.app.GUI.Sales;
 
 import com.pharmacy.app.GUI.Authorization.*;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -78,11 +80,11 @@ public class HomeSales2 extends javax.swing.JPanel {
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
-        txtSearch1 = new javax.swing.JTextField();
         cbxAll1 = new javax.swing.JComboBox<>();
+        txtSearch1 = new javax.swing.JTextField();
         jPanel17 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        lblPdf = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblPromo1 = new javax.swing.JTable();
@@ -420,16 +422,12 @@ public class HomeSales2 extends javax.swing.JPanel {
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
         jPanel16.setMinimumSize(new java.awt.Dimension(400, 40));
         jPanel16.setPreferredSize(new java.awt.Dimension(800, 70));
-        jPanel16.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 13));
+        jPanel16.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 10));
 
-        txtSearch1.setText("Search");
-        txtSearch1.setMinimumSize(new java.awt.Dimension(80, 30));
-        txtSearch1.setPreferredSize(new java.awt.Dimension(500, 30));
-        jPanel16.add(txtSearch1);
-
+        cbxAll1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxAll1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Active", "IsActive" }));
         cbxAll1.setMinimumSize(new java.awt.Dimension(75, 25));
-        cbxAll1.setPreferredSize(new java.awt.Dimension(100, 30));
+        cbxAll1.setPreferredSize(new java.awt.Dimension(80, 35));
         cbxAll1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxAll1ActionPerformed(evt);
@@ -437,24 +435,29 @@ public class HomeSales2 extends javax.swing.JPanel {
         });
         jPanel16.add(cbxAll1);
 
+        txtSearch1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSearch1.setText("Search");
+        txtSearch1.setMinimumSize(new java.awt.Dimension(80, 30));
+        txtSearch1.setPreferredSize(new java.awt.Dimension(500, 35));
+        jPanel16.add(txtSearch1);
+
         jPanel10.add(jPanel16);
 
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
         jPanel17.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel17.setPreferredSize(new java.awt.Dimension(400, 70));
-        jPanel17.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 5, 13));
+        jPanel17.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 10));
 
+        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton4.setText("Refresh");
         jButton4.setMaximumSize(new java.awt.Dimension(325689, 326589));
         jButton4.setMinimumSize(new java.awt.Dimension(0, 0));
-        jButton4.setPreferredSize(new java.awt.Dimension(80, 30));
+        jButton4.setPreferredSize(new java.awt.Dimension(80, 35));
         jPanel17.add(jButton4);
 
-        jButton2.setText("Print");
-        jButton2.setMaximumSize(new java.awt.Dimension(326589, 326589));
-        jButton2.setMinimumSize(new java.awt.Dimension(0, 0));
-        jButton2.setPreferredSize(new java.awt.Dimension(80, 30));
-        jPanel17.add(jButton2);
+        lblPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
+        lblPdf.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel17.add(lblPdf);
 
         jPanel10.add(jPanel17);
 
@@ -462,10 +465,10 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setMinimumSize(new java.awt.Dimension(800, 550));
-        jPanel18.setPreferredSize(new java.awt.Dimension(1000, 550));
+        jPanel18.setPreferredSize(new java.awt.Dimension(1200, 550));
 
         jScrollPane3.setMinimumSize(new java.awt.Dimension(0, 0));
-        jScrollPane3.setPreferredSize(new java.awt.Dimension(1200, 600));
+        jScrollPane3.setPreferredSize(new java.awt.Dimension(1180, 600));
 
         tblPromo1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tblPromo1.setModel(new javax.swing.table.DefaultTableModel(
@@ -537,8 +540,8 @@ public class HomeSales2 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnPaymentMouseClicked
 
     private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
-//        PaymentDialog dialog = new PaymentDialog((JFrame) SwingUtilities.getWindowAncestor(this), true);
-//        dialog.setVisible(true);
+        PaymentDialog dialog = new PaymentDialog((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_btnPaymentActionPerformed
 
     private void tblPromo1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPromo1MousePressed
@@ -562,7 +565,6 @@ public class HomeSales2 extends javax.swing.JPanel {
     private javax.swing.JButton btnReset;
     private javax.swing.JComboBox<String> cbxAll;
     private javax.swing.JComboBox<String> cbxAll1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
@@ -594,6 +596,7 @@ public class HomeSales2 extends javax.swing.JPanel {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JLabel lblNameCustomer;
+    private javax.swing.JLabel lblPdf;
     private javax.swing.JLabel lblPhoneCustomer;
     private javax.swing.JLabel lblPointCustomer;
     private javax.swing.JLabel lblProductDiscount;

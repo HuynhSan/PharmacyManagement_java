@@ -52,7 +52,7 @@ public class CustomerList extends javax.swing.JPanel {
         plHeader.setMaximumSize(new java.awt.Dimension(326589, 326589));
         plHeader.setMinimumSize(new java.awt.Dimension(1050, 70));
         plHeader.setPreferredSize(new java.awt.Dimension(1200, 80));
-        java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 20);
+        java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 10);
         flowLayout1.setAlignOnBaseline(true);
         plHeader.setLayout(flowLayout1);
 
@@ -62,6 +62,7 @@ public class CustomerList extends javax.swing.JPanel {
         plSearch.setPreferredSize(new java.awt.Dimension(800, 70));
         plSearch.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 20));
 
+        cbSort.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbSort.setMaximumSize(new java.awt.Dimension(100, 30));
         cbSort.setMinimumSize(new java.awt.Dimension(100, 30));
@@ -71,7 +72,7 @@ public class CustomerList extends javax.swing.JPanel {
 
         txtSearch.setMaximumSize(new java.awt.Dimension(300, 30));
         txtSearch.setMinimumSize(new java.awt.Dimension(300, 30));
-        txtSearch.setPreferredSize(new java.awt.Dimension(400, 35));
+        txtSearch.setPreferredSize(new java.awt.Dimension(500, 35));
         plSearch.add(txtSearch);
 
         plHeader.add(plSearch);
@@ -82,6 +83,9 @@ public class CustomerList extends javax.swing.JPanel {
         PLButton.setPreferredSize(new java.awt.Dimension(400, 70));
         PLButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 15));
 
+        btnAdd.setBackground(new java.awt.Color(51, 204, 0));
+        btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Thêm");
         btnAdd.setMaximumSize(new java.awt.Dimension(70, 30));
         btnAdd.setMinimumSize(new java.awt.Dimension(70, 30));
@@ -94,10 +98,13 @@ public class CustomerList extends javax.swing.JPanel {
         PLButton.add(btnAdd);
         btnAdd.getAccessibleContext().setAccessibleName("");
 
+        btnRefesh.setBackground(new java.awt.Color(153, 153, 153));
+        btnRefesh.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnRefesh.setForeground(new java.awt.Color(255, 255, 255));
         btnRefesh.setText("Làm mới");
         btnRefesh.setMaximumSize(new java.awt.Dimension(80, 30));
         btnRefesh.setMinimumSize(new java.awt.Dimension(80, 30));
-        btnRefesh.setPreferredSize(new java.awt.Dimension(80, 35));
+        btnRefesh.setPreferredSize(new java.awt.Dimension(100, 35));
         btnRefesh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefeshActionPerformed(evt);
@@ -107,7 +114,7 @@ public class CustomerList extends javax.swing.JPanel {
         btnRefesh.getAccessibleContext().setAccessibleName("");
 
         lblPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
-        lblPdf.setPreferredSize(null);
+        lblPdf.setPreferredSize(new java.awt.Dimension(45, 45));
         PLButton.add(lblPdf);
 
         plHeader.add(PLButton);
