@@ -48,7 +48,32 @@ public class EmployeeProfile extends javax.swing.JPanel {
         lblEmployeeProfile = new javax.swing.JLabel();
         pnlUpdateProfile = new javax.swing.JPanel();
         btnUpdateProfile = new javax.swing.JButton();
+        pnlWorkSchedule = new javax.swing.JPanel();
+        pnlWeekSchedule = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblWeekSchedule = new javax.swing.JTable();
+        pnlEmployeeAttendance = new javax.swing.JPanel();
+        lblWeekPicker1 = new javax.swing.JLabel();
+        cbWeekPicker1 = new javax.swing.JComboBox<>();
         pnlSalary = new javax.swing.JPanel();
+        pnlPayrollComponent = new javax.swing.JPanel();
+        spPayrollComponent = new javax.swing.JScrollPane();
+        tblPayrollComponent = new javax.swing.JTable();
+        pnlEmployeeInfo1 = new javax.swing.JPanel();
+        lblTotal = new javax.swing.JLabel();
+        txtTotal = new javax.swing.JTextField();
+        lblBankAccount = new javax.swing.JLabel();
+        txtBankAccount = new javax.swing.JTextField();
+        lblStatus = new javax.swing.JLabel();
+        txtStatus = new javax.swing.JTextField();
+        lblDate = new javax.swing.JLabel();
+        txtDate = new javax.swing.JTextField();
+        pnlFilter = new javax.swing.JPanel();
+        lblMonth = new javax.swing.JLabel();
+        txtMonth = new javax.swing.JTextField();
+        lblYear = new javax.swing.JLabel();
+        txtYear = new javax.swing.JTextField();
+        btnFilter = new javax.swing.JButton();
         pnlContract = new javax.swing.JPanel();
         pnlEmployeeContract = new javax.swing.JPanel();
         lblEmployeeContract = new javax.swing.JLabel();
@@ -236,42 +261,249 @@ public class EmployeeProfile extends javax.swing.JPanel {
         pnlProfileLayout.setHorizontalGroup(
             pnlProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlProfileLayout.createSequentialGroup()
-                .addGroup(pnlProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlProfileLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(pnlEmployeeProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlProfileLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(pnlUpdateProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlProfileLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(pnlProfileFields, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addGroup(pnlProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(pnlEmployeeProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlProfileLayout.createSequentialGroup()
+                            .addGap(2, 2, 2)
+                            .addComponent(pnlUpdateProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlProfileLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(pnlProfileFields, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         pnlProfileLayout.setVerticalGroup(
             pnlProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlProfileLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+            .addGroup(pnlProfileLayout.createSequentialGroup()
+                .addGap(152, 152, 152)
                 .addComponent(pnlEmployeeProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(pnlProfileFields, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(pnlUpdateProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Thông tin", pnlProfile);
+
+        pnlWeekSchedule.setPreferredSize(new java.awt.Dimension(650, 450));
+        pnlWeekSchedule.setLayout(new java.awt.BorderLayout());
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(550, 402));
+
+        tblWeekSchedule.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Thứ 2", "Ca 1"},
+                {"Thứ 3", null},
+                {"Thứ 4", "Ca 2"},
+                {"Thứ 5", null},
+                {"Thứ 6", null},
+                {"Thứ 7", null},
+                {"Chủ nhật", null}
+            },
+            new String [] {
+                "Ngày làm việc", "Ca làm việc"
+            }
+        ));
+        tblWeekSchedule.setPreferredSize(new java.awt.Dimension(690, 80));
+        jScrollPane2.setViewportView(tblWeekSchedule);
+
+        pnlWeekSchedule.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+        pnlEmployeeAttendance.setLayout(new java.awt.GridBagLayout());
+
+        lblWeekPicker1.setText("Chọn tuần:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 20);
+        pnlEmployeeAttendance.add(lblWeekPicker1, gridBagConstraints);
+
+        cbWeekPicker1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "07/04/2025 - 13/04/2025", "14/04/2025 - 20/04/2025" }));
+        cbWeekPicker1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbWeekPicker1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 3.0;
+        pnlEmployeeAttendance.add(cbWeekPicker1, gridBagConstraints);
+
+        javax.swing.GroupLayout pnlWorkScheduleLayout = new javax.swing.GroupLayout(pnlWorkSchedule);
+        pnlWorkSchedule.setLayout(pnlWorkScheduleLayout);
+        pnlWorkScheduleLayout.setHorizontalGroup(
+            pnlWorkScheduleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlWorkScheduleLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(pnlWorkScheduleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlEmployeeAttendance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlWeekSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        pnlWorkScheduleLayout.setVerticalGroup(
+            pnlWorkScheduleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlWorkScheduleLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(pnlEmployeeAttendance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(pnlWeekSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(86, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Lịch làm việc", pnlWorkSchedule);
+
+        pnlSalary.setMinimumSize(new java.awt.Dimension(0, 550));
+        pnlSalary.setPreferredSize(new java.awt.Dimension(568, 550));
+
+        pnlPayrollComponent.setPreferredSize(new java.awt.Dimension(500, 439));
+        pnlPayrollComponent.setLayout(new java.awt.BorderLayout());
+
+        spPayrollComponent.setMinimumSize(new java.awt.Dimension(452, 20));
+
+        tblPayrollComponent.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Lương cơ bản", "26 ngày", "5,000,000"},
+                {"Phụ cấp ngoài giờ/OT", "10 giờ", "1,000,000"},
+                {"...", null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Thành phần lương", "Ngày/Giờ", "Số tiền"
+            }
+        ));
+        tblPayrollComponent.setEnabled(false);
+        tblPayrollComponent.setFocusable(false);
+        spPayrollComponent.setViewportView(tblPayrollComponent);
+
+        pnlPayrollComponent.add(spPayrollComponent, java.awt.BorderLayout.CENTER);
+
+        pnlEmployeeInfo1.setLayout(new java.awt.GridBagLayout());
+
+        lblTotal.setText("Lương thực nhận:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 40, 20, 20);
+        pnlEmployeeInfo1.add(lblTotal, gridBagConstraints);
+
+        txtTotal.setEditable(false);
+        txtTotal.setFocusable(false);
+        txtTotal.setMinimumSize(new java.awt.Dimension(72, 22));
+        txtTotal.setPreferredSize(new java.awt.Dimension(72, 22));
+        txtTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTotalActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
+        pnlEmployeeInfo1.add(txtTotal, gridBagConstraints);
+
+        lblBankAccount.setText("Số tài khoản:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 20);
+        pnlEmployeeInfo1.add(lblBankAccount, gridBagConstraints);
+
+        txtBankAccount.setEditable(false);
+        txtBankAccount.setFocusable(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
+        pnlEmployeeInfo1.add(txtBankAccount, gridBagConstraints);
+
+        lblStatus.setText("Trạng thái:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 20);
+        pnlEmployeeInfo1.add(lblStatus, gridBagConstraints);
+
+        txtStatus.setEditable(false);
+        txtStatus.setFocusable(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 2.0;
+        pnlEmployeeInfo1.add(txtStatus, gridBagConstraints);
+
+        lblDate.setText("Ngày trả lương:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 40, 0, 20);
+        pnlEmployeeInfo1.add(lblDate, gridBagConstraints);
+
+        txtDate.setEditable(false);
+        txtDate.setFocusable(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 2.0;
+        pnlEmployeeInfo1.add(txtDate, gridBagConstraints);
+
+        pnlFilter.setLayout(new java.awt.GridBagLayout());
+
+        lblMonth.setText("Tháng:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 20);
+        pnlFilter.add(lblMonth, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 30);
+        pnlFilter.add(txtMonth, gridBagConstraints);
+
+        lblYear.setText("Năm:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 20);
+        pnlFilter.add(lblYear, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 40);
+        pnlFilter.add(txtYear, gridBagConstraints);
+
+        btnFilter.setText("Lọc");
+        pnlFilter.add(btnFilter, new java.awt.GridBagConstraints());
 
         javax.swing.GroupLayout pnlSalaryLayout = new javax.swing.GroupLayout(pnlSalary);
         pnlSalary.setLayout(pnlSalaryLayout);
         pnlSalaryLayout.setHorizontalGroup(
             pnlSalaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSalaryLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(pnlSalaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnlFilter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlPayrollComponent, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlEmployeeInfo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
         pnlSalaryLayout.setVerticalGroup(
             pnlSalaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSalaryLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(pnlFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(pnlEmployeeInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(pnlPayrollComponent, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         jTabbedPane1.addTab("Lương", pnlSalary);
@@ -516,18 +748,18 @@ public class EmployeeProfile extends javax.swing.JPanel {
         pnlContractLayout.setHorizontalGroup(
             pnlContractLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlContractLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(28, 28, 28)
                 .addGroup(pnlContractLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlEmployeeContract, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
                     .addComponent(pnlEmployeeInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlContractInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlSalaryTerms, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(30, 30, 30))
+                .addGap(32, 32, 32))
         );
         pnlContractLayout.setVerticalGroup(
             pnlContractLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlContractLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(73, 73, 73)
                 .addComponent(pnlEmployeeContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(pnlEmployeeInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -535,7 +767,7 @@ public class EmployeeProfile extends javax.swing.JPanel {
                 .addComponent(pnlContractInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnlSalaryTerms, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hợp đồng", pnlContract);
@@ -544,16 +776,16 @@ public class EmployeeProfile extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -569,16 +801,29 @@ public class EmployeeProfile extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSigningDateActionPerformed
 
+    private void txtTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTotalActionPerformed
+
+    private void cbWeekPicker1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbWeekPicker1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbWeekPicker1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnFilter;
     private javax.swing.JButton btnUpdateProfile;
+    private javax.swing.JComboBox<String> cbWeekPicker1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblAddress;
+    private javax.swing.JLabel lblBankAccount;
     private javax.swing.JLabel lblBaseSalary;
     private javax.swing.JLabel lblBaseWorkDays;
     private javax.swing.JLabel lblContractID;
     private javax.swing.JLabel lblDOB;
+    private javax.swing.JLabel lblDate;
     private javax.swing.JLabel lblDegree;
     private javax.swing.JLabel lblDescription;
     private javax.swing.JLabel lblEmail;
@@ -588,26 +833,42 @@ public class EmployeeProfile extends javax.swing.JPanel {
     private javax.swing.JLabel lblEmpoyeeID;
     private javax.swing.JLabel lblEndDate;
     private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblMonth;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPhone;
     private javax.swing.JLabel lblPosition;
     private javax.swing.JLabel lblSigningDate;
     private javax.swing.JLabel lblStartDate;
+    private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblTotal;
+    private javax.swing.JLabel lblWeekPicker1;
+    private javax.swing.JLabel lblYear;
     private javax.swing.JPanel pnlContract;
     private javax.swing.JPanel pnlContractInfo;
+    private javax.swing.JPanel pnlEmployeeAttendance;
     private javax.swing.JPanel pnlEmployeeContract;
     private javax.swing.JPanel pnlEmployeeInfo;
+    private javax.swing.JPanel pnlEmployeeInfo1;
     private javax.swing.JPanel pnlEmployeeProfile;
+    private javax.swing.JPanel pnlFilter;
+    private javax.swing.JPanel pnlPayrollComponent;
     private javax.swing.JPanel pnlProfile;
     private javax.swing.JPanel pnlProfileFields;
     private javax.swing.JPanel pnlSalary;
     private javax.swing.JPanel pnlSalaryTerms;
     private javax.swing.JPanel pnlUpdateProfile;
+    private javax.swing.JPanel pnlWeekSchedule;
+    private javax.swing.JPanel pnlWorkSchedule;
+    private javax.swing.JScrollPane spPayrollComponent;
+    private javax.swing.JTable tblPayrollComponent;
+    private javax.swing.JTable tblWeekSchedule;
     private javax.swing.JTextField txtAddress;
+    private javax.swing.JTextField txtBankAccount;
     private javax.swing.JTextField txtBaseSalary;
     private javax.swing.JTextField txtBaseWorkDays;
     private javax.swing.JTextField txtContractID;
     private javax.swing.JTextField txtDOB;
+    private javax.swing.JTextField txtDate;
     private javax.swing.JTextField txtDegree;
     private javax.swing.JTextField txtDescription;
     private javax.swing.JTextField txtEmail;
@@ -616,10 +877,14 @@ public class EmployeeProfile extends javax.swing.JPanel {
     private javax.swing.JTextField txtEndDate;
     private javax.swing.JTextField txtExperienceYears;
     private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtMonth;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPhone;
     private javax.swing.JTextField txtPosition;
     private javax.swing.JTextField txtSigningDate;
     private javax.swing.JTextField txtStartDate;
+    private javax.swing.JTextField txtStatus;
+    private javax.swing.JTextField txtTotal;
+    private javax.swing.JTextField txtYear;
     // End of variables declaration//GEN-END:variables
 }

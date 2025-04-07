@@ -194,7 +194,6 @@ com\pharmacy\app\GUI\Medicine\MedicineDetails$2.class
 com\pharmacy\app\GUI\Promo\AdjustPromo$2.class
 com\pharmacy\app\homepage$13.class
 com\pharmacy\app\GUI\Customer\CustomerDetail$2.class
-com\pharmacy\app\GUI\Employee\AddEmployee$6.class
 com\pharmacy\app\GUI\Importing\UpdatePO$3.class
 com\pharmacy\app\GUI\Employee\UpdateEmployee$2.class
 com\pharmacy\app\GUI\User\UserManagement$5.class
@@ -208,7 +207,6 @@ com\pharmacy\app\GUI\User\UpdateUserPassword$2.class
 com\pharmacy\app\GUI\Employee\UpdateEmployee$8.class
 com\pharmacy\app\GUI\Medicine\MedicinesList.class
 com\pharmacy\app\GUI\Authorization\AddRole$1$1.class
-com\pharmacy\app\GUI\Employee\AddEmployee$7.class
 com\pharmacy\app\GUI\Medicine\UpdateMedicine$6.class
 com\pharmacy\app\GUI\User\UpdateUser$3.class
 com\pharmacy\app\homepage$2.class
@@ -222,7 +220,6 @@ com\pharmacy\app\GUI\Employee\EmployeeManagement$10.class
 com\pharmacy\app\GUI\Promo\PromoDetail$1.class
 com\pharmacy\app\GUI\Promo\HomePromo$1.class
 com\pharmacy\app\GUI\Supplier\SupplierList$1.class
-com\pharmacy\app\GUI\Employee\AddEmployee$8$1.class
 com\pharmacy\app\GUI\Sales\HomeSales2$5.class
 com\pharmacy\app\GUI\Medicine\MedicineDetails$7.class
 com\pharmacy\app\GUI\Sales\SalesPanel$3.class
@@ -235,7 +232,6 @@ com\pharmacy\app\GUI\Employee\UpdateContract$2.class
 com\pharmacy\app\GUI\Importing\UpdatePO$7.class
 com\pharmacy\app\GUI\Sales\SalesPanel$5.class
 com\pharmacy\app\GUI\Customer\CustomerList$1.class
-com\pharmacy\app\GUI\Employee\AddEmployee$8.class
 com\pharmacy\app\GUI\Importing\PurchaseOrder$2.class
 com\pharmacy\app\GUI\Medicine\UpdateMedicine$5.class
 com\pharmacy\app\GUI\User\AddUser$1.class
