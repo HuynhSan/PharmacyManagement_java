@@ -57,11 +57,11 @@ public class PurchaseOrder extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(231, 242, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(640, 500));
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBackground(new java.awt.Color(231, 242, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("LẬP ĐƠN ĐẶT HÀNG");
@@ -144,7 +144,7 @@ public class PurchaseOrder extends javax.swing.JPanel {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         add(jPanel1, gridBagConstraints);
 
-        jPanel2.setBackground(new java.awt.Color(231, 242, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Chi tiết đơn đặt hàng"));
         jPanel2.setPreferredSize(new java.awt.Dimension(600, 363));
 
@@ -317,7 +317,7 @@ public class PurchaseOrder extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jPanel2, gridBagConstraints);
 
-        jPanel3.setBackground(new java.awt.Color(231, 242, 255));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setBackground(new java.awt.Color(0, 204, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
