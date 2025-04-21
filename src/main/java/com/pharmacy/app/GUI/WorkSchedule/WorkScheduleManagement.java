@@ -53,6 +53,16 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         tblShiftList = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new java.awt.BorderLayout());
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlSchedule.setBackground(new java.awt.Color(255, 255, 255));
+        pnlSchedule.setLayout(new java.awt.BorderLayout());
+
+        pnlCreateSchedule.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCreateSchedule.setPreferredSize(new java.awt.Dimension(464, 50));
         pnlCreateSchedule.setLayout(new java.awt.GridBagLayout());
 
         lblWeekPicker.setText("Chọn tuần:");
@@ -82,6 +92,9 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
         jButton1.setText("Xóa");
         pnlCreateSchedule.add(jButton1, new java.awt.GridBagConstraints());
 
+        pnlSchedule.add(pnlCreateSchedule, java.awt.BorderLayout.NORTH);
+
+        pnlWeekSchedule.setBackground(new java.awt.Color(255, 255, 255));
         pnlWeekSchedule.setPreferredSize(new java.awt.Dimension(650, 450));
         pnlWeekSchedule.setLayout(new java.awt.BorderLayout());
 
@@ -106,29 +119,15 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
 
         pnlWeekSchedule.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        javax.swing.GroupLayout pnlScheduleLayout = new javax.swing.GroupLayout(pnlSchedule);
-        pnlSchedule.setLayout(pnlScheduleLayout);
-        pnlScheduleLayout.setHorizontalGroup(
-            pnlScheduleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlScheduleLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(pnlScheduleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlWeekSchedule, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlCreateSchedule, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        pnlScheduleLayout.setVerticalGroup(
-            pnlScheduleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlScheduleLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(pnlCreateSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(pnlWeekSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
+        pnlSchedule.add(pnlWeekSchedule, java.awt.BorderLayout.CENTER);
 
         jTabbedPane1.addTab("Lịch làm việc", pnlSchedule);
 
+        pnlAttendance.setBackground(new java.awt.Color(255, 255, 255));
+        pnlAttendance.setLayout(new java.awt.BorderLayout());
+
+        pnlEmployeeAttendance.setBackground(new java.awt.Color(255, 255, 255));
+        pnlEmployeeAttendance.setPreferredSize(new java.awt.Dimension(240, 50));
         pnlEmployeeAttendance.setLayout(new java.awt.GridBagLayout());
 
         lblWeekPicker1.setText("Chọn tuần:");
@@ -147,6 +146,9 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
         gridBagConstraints.weightx = 3.0;
         pnlEmployeeAttendance.add(cbWeekPicker1, gridBagConstraints);
 
+        pnlAttendance.add(pnlEmployeeAttendance, java.awt.BorderLayout.NORTH);
+
+        pnlWeekAttendance.setBackground(new java.awt.Color(255, 255, 255));
         pnlWeekAttendance.setPreferredSize(new java.awt.Dimension(650, 450));
         pnlWeekAttendance.setLayout(new java.awt.BorderLayout());
 
@@ -168,29 +170,14 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
 
         pnlWeekAttendance.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
-        javax.swing.GroupLayout pnlAttendanceLayout = new javax.swing.GroupLayout(pnlAttendance);
-        pnlAttendance.setLayout(pnlAttendanceLayout);
-        pnlAttendanceLayout.setHorizontalGroup(
-            pnlAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAttendanceLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(pnlAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlWeekAttendance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlEmployeeAttendance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        pnlAttendanceLayout.setVerticalGroup(
-            pnlAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAttendanceLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(pnlEmployeeAttendance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(pnlWeekAttendance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+        pnlAttendance.add(pnlWeekAttendance, java.awt.BorderLayout.CENTER);
 
         jTabbedPane1.addTab("Chấm công", pnlAttendance);
 
+        pnlWorkShift.setBackground(new java.awt.Color(255, 255, 255));
+        pnlWorkShift.setLayout(new java.awt.BorderLayout());
+
+        pnlButton.setBackground(new java.awt.Color(255, 255, 255));
         pnlButton.setPreferredSize(new java.awt.Dimension(320, 35));
         pnlButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 30, 5));
 
@@ -215,6 +202,9 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
         btnPdf1.setPreferredSize(new java.awt.Dimension(72, 22));
         pnlButton.add(btnPdf1);
 
+        pnlWorkShift.add(pnlButton, java.awt.BorderLayout.NORTH);
+
+        pnlShiftList.setBackground(new java.awt.Color(255, 255, 255));
         pnlShiftList.setPreferredSize(new java.awt.Dimension(600, 439));
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(580, 402));
@@ -244,39 +234,11 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
 
         pnlShiftList.add(jScrollPane3);
 
-        javax.swing.GroupLayout pnlWorkShiftLayout = new javax.swing.GroupLayout(pnlWorkShift);
-        pnlWorkShift.setLayout(pnlWorkShiftLayout);
-        pnlWorkShiftLayout.setHorizontalGroup(
-            pnlWorkShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlWorkShiftLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(pnlWorkShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnlShiftList, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        pnlWorkShiftLayout.setVerticalGroup(
-            pnlWorkShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlWorkShiftLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(pnlButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlShiftList, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
+        pnlWorkShift.add(pnlShiftList, java.awt.BorderLayout.CENTER);
 
         jTabbedPane1.addTab("Ca làm việc", pnlWorkShift);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-        );
+        add(jTabbedPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbWeekPickerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbWeekPickerActionPerformed

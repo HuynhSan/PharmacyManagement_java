@@ -55,20 +55,22 @@ public class EmployeeManagement extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText("");
         setPreferredSize(new java.awt.Dimension(1200, 508));
+        setLayout(new java.awt.BorderLayout());
 
         tpEmployeeManagement.setBackground(new java.awt.Color(255, 255, 255));
         tpEmployeeManagement.setPreferredSize(new java.awt.Dimension(1200, 529));
 
         pnlEmployees.setBackground(new java.awt.Color(255, 255, 255));
         pnlEmployees.setPreferredSize(new java.awt.Dimension(1180, 700));
+        pnlEmployees.setLayout(new java.awt.BorderLayout());
 
         pnlEmployee1.setBackground(new java.awt.Color(255, 255, 255));
         pnlEmployee1.setToolTipText("");
-        pnlEmployee1.setPreferredSize(new java.awt.Dimension(1180, 40));
+        pnlEmployee1.setPreferredSize(new java.awt.Dimension(1180, 70));
         pnlEmployee1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(500, 40));
+        jPanel2.setPreferredSize(new java.awt.Dimension(500, 70));
         jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         txtSearchEmployee.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
@@ -98,7 +100,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
         pnlEmployee1.add(jPanel2);
 
         pnlEmployeeButton.setBackground(new java.awt.Color(255, 255, 255));
-        pnlEmployeeButton.setPreferredSize(new java.awt.Dimension(680, 40));
+        pnlEmployeeButton.setPreferredSize(new java.awt.Dimension(680, 70));
         pnlEmployeeButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         btnAddEmployee.setText("Thêm");
@@ -139,6 +141,8 @@ public class EmployeeManagement extends javax.swing.JPanel {
 
         pnlEmployee1.add(pnlEmployeeButton);
 
+        pnlEmployees.add(pnlEmployee1, java.awt.BorderLayout.NORTH);
+
         pnlEmployee2.setBackground(new java.awt.Color(255, 255, 255));
         pnlEmployee2.setPreferredSize(new java.awt.Dimension(600, 439));
 
@@ -169,39 +173,21 @@ public class EmployeeManagement extends javax.swing.JPanel {
 
         pnlEmployee2.add(jScrollPane1);
 
-        javax.swing.GroupLayout pnlEmployeesLayout = new javax.swing.GroupLayout(pnlEmployees);
-        pnlEmployees.setLayout(pnlEmployeesLayout);
-        pnlEmployeesLayout.setHorizontalGroup(
-            pnlEmployeesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEmployeesLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(pnlEmployeesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlEmployee2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlEmployee1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlEmployeesLayout.setVerticalGroup(
-            pnlEmployeesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEmployeesLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlEmployee1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlEmployee2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-        );
+        pnlEmployees.add(pnlEmployee2, java.awt.BorderLayout.CENTER);
 
         tpEmployeeManagement.addTab("Nhân viên", pnlEmployees);
 
         pnlContracts.setBackground(new java.awt.Color(255, 255, 255));
         pnlContracts.setPreferredSize(new java.awt.Dimension(1200, 800));
+        pnlContracts.setLayout(new java.awt.BorderLayout());
 
         pnlContract1.setBackground(new java.awt.Color(255, 255, 255));
         pnlContract1.setToolTipText("");
-        pnlContract1.setPreferredSize(new java.awt.Dimension(1200, 120));
+        pnlContract1.setPreferredSize(new java.awt.Dimension(1200, 70));
         pnlContract1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(600, 100));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 70));
 
         txtSearchContract.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtSearchContract.setForeground(new java.awt.Color(153, 153, 153));
@@ -242,13 +228,13 @@ public class EmployeeManagement extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSearchContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pnlContract1.add(jPanel1);
 
         pnlContractButton.setBackground(new java.awt.Color(255, 255, 255));
-        pnlContractButton.setPreferredSize(new java.awt.Dimension(600, 100));
+        pnlContractButton.setPreferredSize(new java.awt.Dimension(600, 70));
         pnlContractButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 5));
 
         btnAddContract.setBackground(new java.awt.Color(0, 204, 51));
@@ -294,6 +280,9 @@ public class EmployeeManagement extends javax.swing.JPanel {
 
         pnlContract1.add(pnlContractButton);
 
+        pnlContracts.add(pnlContract1, java.awt.BorderLayout.NORTH);
+
+        pnlContract2.setBackground(new java.awt.Color(255, 255, 255));
         pnlContract2.setPreferredSize(new java.awt.Dimension(1180, 500));
 
         jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
@@ -326,39 +315,11 @@ public class EmployeeManagement extends javax.swing.JPanel {
 
         pnlContract2.add(jScrollPane2);
 
-        javax.swing.GroupLayout pnlContractsLayout = new javax.swing.GroupLayout(pnlContracts);
-        pnlContracts.setLayout(pnlContractsLayout);
-        pnlContractsLayout.setHorizontalGroup(
-            pnlContractsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlContractsLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(pnlContractsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlContract2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlContract1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlContractsLayout.setVerticalGroup(
-            pnlContractsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContractsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlContract1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlContract2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-        );
+        pnlContracts.add(pnlContract2, java.awt.BorderLayout.CENTER);
 
         tpEmployeeManagement.addTab("Hợp đồng", pnlContracts);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpEmployeeManagement, javax.swing.GroupLayout.DEFAULT_SIZE, 1216, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpEmployeeManagement, javax.swing.GroupLayout.PREFERRED_SIZE, 508, Short.MAX_VALUE)
-        );
+        add(tpEmployeeManagement, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtSearchEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchEmployeeActionPerformed

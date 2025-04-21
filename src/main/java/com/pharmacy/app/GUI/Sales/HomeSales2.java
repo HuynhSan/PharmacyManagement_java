@@ -51,7 +51,6 @@ public class HomeSales2 extends javax.swing.JPanel {
         jPanel5 = new javax.swing.JPanel();
         btnDelete1LineInCart = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
@@ -79,10 +78,8 @@ public class HomeSales2 extends javax.swing.JPanel {
         btnPayment = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
         cbxAll1 = new javax.swing.JComboBox<>();
         txtSearch1 = new javax.swing.JTextField();
-        jPanel17 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         lblPdf = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
@@ -90,21 +87,22 @@ public class HomeSales2 extends javax.swing.JPanel {
         tblPromo1 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1200, 800));
+        setPreferredSize(new java.awt.Dimension(986, 578));
+        setLayout(new java.awt.BorderLayout());
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1050, 800));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1229, 800));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1050, 750));
 
         jPanel19.setBackground(new java.awt.Color(255, 255, 255));
         jPanel19.setPreferredSize(new java.awt.Dimension(1200, 750));
-        jPanel19.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        jPanel19.setLayout(new java.awt.BorderLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(850, 700));
+        jPanel1.setPreferredSize(new java.awt.Dimension(850, 500));
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -265,14 +263,10 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jPanel1.add(jPanel5);
 
-        jPanel19.add(jPanel1);
-
-        jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jSeparator1.setPreferredSize(new java.awt.Dimension(10, 700));
-        jPanel19.add(jSeparator1);
+        jPanel19.add(jPanel1, java.awt.BorderLayout.WEST);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setName(""); // NOI18N
         jPanel2.setPreferredSize(new java.awt.Dimension(360, 700));
         jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 20));
 
@@ -403,7 +397,7 @@ public class HomeSales2 extends javax.swing.JPanel {
 
         jPanel2.add(jPanel7);
 
-        jPanel19.add(jPanel2);
+        jPanel19.add(jPanel2, java.awt.BorderLayout.EAST);
 
         jScrollPane1.setViewportView(jPanel19);
 
@@ -413,62 +407,42 @@ public class HomeSales2 extends javax.swing.JPanel {
         jPanel9.setMaximumSize(new java.awt.Dimension(326589, 326589));
         jPanel9.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel9.setPreferredSize(new java.awt.Dimension(1250, 750));
-        jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 5));
+        jPanel9.setLayout(new java.awt.BorderLayout());
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setMaximumSize(new java.awt.Dimension(800, 50));
         jPanel10.setMinimumSize(new java.awt.Dimension(800, 54));
         jPanel10.setPreferredSize(new java.awt.Dimension(1250, 70));
-        jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 10));
-
-        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel16.setMinimumSize(new java.awt.Dimension(400, 40));
-        jPanel16.setPreferredSize(new java.awt.Dimension(780, 70));
-        jPanel16.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 15, 10));
 
         cbxAll1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxAll1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Active", "IsActive" }));
         cbxAll1.setMinimumSize(new java.awt.Dimension(75, 25));
         cbxAll1.setPreferredSize(new java.awt.Dimension(80, 35));
-        cbxAll1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxAll1ActionPerformed(evt);
-            }
-        });
-        jPanel16.add(cbxAll1);
+        jPanel10.add(cbxAll1);
 
         txtSearch1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtSearch1.setText("Search");
         txtSearch1.setMinimumSize(new java.awt.Dimension(80, 30));
         txtSearch1.setPreferredSize(new java.awt.Dimension(500, 35));
-        jPanel16.add(txtSearch1);
-
-        jPanel10.add(jPanel16);
-
-        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel17.setMinimumSize(new java.awt.Dimension(0, 0));
-        jPanel17.setPreferredSize(new java.awt.Dimension(450, 70));
-        jPanel17.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 10));
+        jPanel10.add(txtSearch1);
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton4.setText("Refresh");
         jButton4.setMaximumSize(new java.awt.Dimension(325689, 326589));
         jButton4.setMinimumSize(new java.awt.Dimension(0, 0));
         jButton4.setPreferredSize(new java.awt.Dimension(80, 35));
-        jPanel17.add(jButton4);
+        jPanel10.add(jButton4);
 
         lblPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
         lblPdf.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel17.add(lblPdf);
+        jPanel10.add(lblPdf);
 
-        jPanel10.add(jPanel17);
-
-        jPanel9.add(jPanel10);
+        jPanel9.add(jPanel10, java.awt.BorderLayout.NORTH);
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setMinimumSize(new java.awt.Dimension(800, 550));
         jPanel18.setPreferredSize(new java.awt.Dimension(1250, 550));
-        jPanel18.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 5));
+        jPanel18.setLayout(new java.awt.BorderLayout());
 
         jScrollPane3.setMinimumSize(new java.awt.Dimension(0, 0));
         jScrollPane3.setPreferredSize(new java.awt.Dimension(1210, 600));
@@ -495,7 +469,7 @@ public class HomeSales2 extends javax.swing.JPanel {
         });
         tblPromo1.setMaximumSize(new java.awt.Dimension(325689, 326589));
         tblPromo1.setMinimumSize(new java.awt.Dimension(0, 0));
-        tblPromo1.setPreferredSize(new java.awt.Dimension(1230, 700));
+        tblPromo1.setPreferredSize(new java.awt.Dimension(750, 700));
         tblPromo1.setRowHeight(30);
         tblPromo1.setShowGrid(true);
         tblPromo1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -506,28 +480,13 @@ public class HomeSales2 extends javax.swing.JPanel {
         jScrollPane3.setViewportView(tblPromo1);
         tblPromo1.getAccessibleContext().setAccessibleDescription("");
 
-        jPanel18.add(jScrollPane3);
+        jPanel18.add(jScrollPane3, java.awt.BorderLayout.CENTER);
 
-        jPanel9.add(jPanel18);
+        jPanel9.add(jPanel18, java.awt.BorderLayout.CENTER);
 
         jTabbedPane1.addTab("Hóa đơn", jPanel9);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        add(jTabbedPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblPromoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPromoMousePressed
@@ -550,10 +509,6 @@ public class HomeSales2 extends javax.swing.JPanel {
     private void tblPromo1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPromo1MousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_tblPromo1MousePressed
-
-    private void cbxAll1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxAll1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxAll1ActionPerformed
 
     private void btnAddMedicineToCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMedicineToCartActionPerformed
         // TODO add your handling code here:
@@ -579,8 +534,6 @@ public class HomeSales2 extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
@@ -594,7 +547,6 @@ public class HomeSales2 extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField8;

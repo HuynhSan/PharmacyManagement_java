@@ -5,6 +5,7 @@
 package com.pharmacy.app.GUI.Customer;
 
 import com.pharmacy.app.GUI.Promo.AddPromo;
+import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -31,106 +32,105 @@ public class CustomerList extends javax.swing.JPanel {
     private void initComponents() {
 
         plHeader = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         plSearch = new javax.swing.JPanel();
         cbSort = new javax.swing.JComboBox<>();
-        txtSearch = new javax.swing.JTextField();
-        PLButton = new javax.swing.JPanel();
+        txtSearch1 = new javax.swing.JTextField();
+        plButton = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnRefesh = new javax.swing.JButton();
-        lblPdf = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
         plCustomerList = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbCustomerList = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(326589, 326589));
-        setMinimumSize(new java.awt.Dimension(800, 580));
-        setPreferredSize(new java.awt.Dimension(1200, 800));
+        setMinimumSize(new java.awt.Dimension(986, 578));
+        setPreferredSize(new java.awt.Dimension(986, 578));
+        setLayout(new java.awt.BorderLayout());
 
         plHeader.setBackground(new java.awt.Color(255, 255, 255));
-        plHeader.setMaximumSize(new java.awt.Dimension(326589, 326589));
-        plHeader.setMinimumSize(new java.awt.Dimension(1050, 70));
-        plHeader.setPreferredSize(new java.awt.Dimension(1200, 80));
-        java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 10);
-        flowLayout1.setAlignOnBaseline(true);
-        plHeader.setLayout(flowLayout1);
+        plHeader.setMaximumSize(new java.awt.Dimension(800, 100));
+        plHeader.setMinimumSize(new java.awt.Dimension(800, 100));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("QUẢN LÝ KHÁCH HÀNG");
 
         plSearch.setBackground(new java.awt.Color(255, 255, 255));
-        plSearch.setMaximumSize(new java.awt.Dimension(326589, 326589));
-        plSearch.setMinimumSize(new java.awt.Dimension(650, 70));
-        plSearch.setPreferredSize(new java.awt.Dimension(800, 70));
-        plSearch.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 20));
+        plSearch.setMaximumSize(new java.awt.Dimension(450, 70));
+        plSearch.setMinimumSize(new java.awt.Dimension(450, 70));
+        plSearch.setPreferredSize(new java.awt.Dimension(450, 70));
+        plSearch.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 20));
 
-        cbSort.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbSort.setMaximumSize(new java.awt.Dimension(100, 30));
         cbSort.setMinimumSize(new java.awt.Dimension(100, 30));
-        cbSort.setPreferredSize(new java.awt.Dimension(80, 35));
+        cbSort.setPreferredSize(new java.awt.Dimension(100, 30));
         plSearch.add(cbSort);
-        cbSort.getAccessibleContext().setAccessibleName("");
 
-        txtSearch.setMaximumSize(new java.awt.Dimension(300, 30));
-        txtSearch.setMinimumSize(new java.awt.Dimension(300, 30));
-        txtSearch.setPreferredSize(new java.awt.Dimension(500, 35));
-        plSearch.add(txtSearch);
+        txtSearch1.setMaximumSize(new java.awt.Dimension(300, 30));
+        txtSearch1.setMinimumSize(new java.awt.Dimension(300, 30));
+        txtSearch1.setPreferredSize(new java.awt.Dimension(300, 30));
+        plSearch.add(txtSearch1);
 
-        plHeader.add(plSearch);
+        plButton.setBackground(new java.awt.Color(255, 255, 255));
+        plButton.setMaximumSize(new java.awt.Dimension(300, 70));
+        plButton.setMinimumSize(new java.awt.Dimension(300, 70));
+        plButton.setPreferredSize(new java.awt.Dimension(300, 70));
+        plButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 15));
 
-        PLButton.setBackground(new java.awt.Color(255, 255, 255));
-        PLButton.setMaximumSize(new java.awt.Dimension(326589, 326589));
-        PLButton.setMinimumSize(new java.awt.Dimension(300, 70));
-        PLButton.setPreferredSize(new java.awt.Dimension(400, 70));
-        PLButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 15));
-
-        btnAdd.setBackground(new java.awt.Color(51, 204, 0));
-        btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnAdd.setText("Thêm");
-        btnAdd.setMaximumSize(new java.awt.Dimension(70, 30));
-        btnAdd.setMinimumSize(new java.awt.Dimension(70, 30));
-        btnAdd.setPreferredSize(new java.awt.Dimension(80, 35));
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
-            }
-        });
-        PLButton.add(btnAdd);
-        btnAdd.getAccessibleContext().setAccessibleName("");
+        btnAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdd.setMaximumSize(new java.awt.Dimension(75, 30));
+        btnAdd.setMinimumSize(new java.awt.Dimension(75, 30));
+        btnAdd.setPreferredSize(new java.awt.Dimension(75, 30));
+        plButton.add(btnAdd);
 
-        btnRefesh.setBackground(new java.awt.Color(153, 153, 153));
-        btnRefesh.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnRefesh.setForeground(new java.awt.Color(255, 255, 255));
+        btnRefesh.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRefesh.setText("Làm mới");
-        btnRefesh.setMaximumSize(new java.awt.Dimension(80, 30));
-        btnRefesh.setMinimumSize(new java.awt.Dimension(80, 30));
-        btnRefesh.setPreferredSize(new java.awt.Dimension(100, 35));
-        btnRefesh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefeshActionPerformed(evt);
-            }
-        });
-        PLButton.add(btnRefesh);
-        btnRefesh.getAccessibleContext().setAccessibleName("");
+        btnRefesh.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRefesh.setMaximumSize(new java.awt.Dimension(90, 30));
+        btnRefesh.setMinimumSize(new java.awt.Dimension(90, 30));
+        btnRefesh.setPreferredSize(new java.awt.Dimension(90, 30));
+        plButton.add(btnRefesh);
 
-        lblPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
-        lblPdf.setPreferredSize(new java.awt.Dimension(45, 45));
-        PLButton.add(lblPdf);
+        lblImg.setBackground(new java.awt.Color(255, 255, 255));
+        lblImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
+        plButton.add(lblImg);
 
-        plHeader.add(PLButton);
+        javax.swing.GroupLayout plHeaderLayout = new javax.swing.GroupLayout(plHeader);
+        plHeader.setLayout(plHeaderLayout);
+        plHeaderLayout.setHorizontalGroup(
+            plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(plHeaderLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 209, Short.MAX_VALUE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        plHeaderLayout.setVerticalGroup(
+            plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(plHeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
-        add(plHeader);
+        add(plHeader, java.awt.BorderLayout.NORTH);
 
         plCustomerList.setBackground(new java.awt.Color(255, 255, 255));
         plCustomerList.setMaximumSize(new java.awt.Dimension(326589, 326589));
         plCustomerList.setMinimumSize(new java.awt.Dimension(1050, 450));
         plCustomerList.setPreferredSize(new java.awt.Dimension(1200, 450));
-
-        jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
-        jSeparator1.setMaximumSize(new java.awt.Dimension(700, 10));
-        jSeparator1.setMinimumSize(new java.awt.Dimension(700, 10));
-        jSeparator1.setPreferredSize(new java.awt.Dimension(700, 20));
-        plCustomerList.add(jSeparator1);
+        plCustomerList.setLayout(new java.awt.BorderLayout());
 
         jScrollPane1.setMaximumSize(new java.awt.Dimension(326589, 326589));
         jScrollPane1.setMinimumSize(new java.awt.Dimension(780, 400));
@@ -163,34 +163,31 @@ public class CustomerList extends javax.swing.JPanel {
         tbCustomerList.setShowGrid(true);
         jScrollPane1.setViewportView(tbCustomerList);
 
-        plCustomerList.add(jScrollPane1);
+        plCustomerList.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        add(plCustomerList);
+        add(plCustomerList, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
+private void btnRefeshActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: xử lý khi nhấn nút Refresh
+}
 
-    private void btnRefeshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefeshActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRefeshActionPerformed
-
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
-        AddCustomer dialog = new AddCustomer((JFrame) SwingUtilities.getWindowAncestor(this), true);
-        dialog.setVisible(true);
-    }//GEN-LAST:event_btnAddActionPerformed
+private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: xử lý khi nhấn nút Thêm
+}
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel PLButton;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnRefesh;
     private javax.swing.JComboBox<String> cbSort;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel lblPdf;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JPanel plButton;
     private javax.swing.JPanel plCustomerList;
     private javax.swing.JPanel plHeader;
     private javax.swing.JPanel plSearch;
     private javax.swing.JTable tbCustomerList;
-    private javax.swing.JTextField txtSearch;
+    private javax.swing.JTextField txtSearch1;
     // End of variables declaration//GEN-END:variables
 }

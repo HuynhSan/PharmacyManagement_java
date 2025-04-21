@@ -103,6 +103,13 @@ public class EmployeeProfile extends javax.swing.JPanel {
         lblBaseWorkDays = new javax.swing.JLabel();
         txtBaseWorkDays = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlProfile.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlProfileFields.setBackground(new java.awt.Color(255, 255, 255));
         pnlProfileFields.setLayout(new java.awt.GridBagLayout());
 
         lblName.setText("Họ tên:");
@@ -244,11 +251,15 @@ public class EmployeeProfile extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 30, 40);
         pnlProfileFields.add(txtGender, gridBagConstraints);
 
+        pnlEmployeeProfile.setBackground(new java.awt.Color(255, 255, 255));
+
         lblEmployeeProfile.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblEmployeeProfile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblEmployeeProfile.setText("THÔNG TIN NHÂN VIÊN");
         lblEmployeeProfile.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         pnlEmployeeProfile.add(lblEmployeeProfile);
+
+        pnlUpdateProfile.setBackground(new java.awt.Color(255, 255, 255));
 
         btnUpdateProfile.setBackground(new java.awt.Color(0, 204, 51));
         btnUpdateProfile.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -277,16 +288,18 @@ public class EmployeeProfile extends javax.swing.JPanel {
         pnlProfileLayout.setVerticalGroup(
             pnlProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlProfileLayout.createSequentialGroup()
-                .addGap(152, 152, 152)
+                .addGap(83, 83, 83)
                 .addComponent(pnlEmployeeProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(pnlProfileFields, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(pnlUpdateProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Thông tin", pnlProfile);
+
+        pnlWorkSchedule.setBackground(new java.awt.Color(255, 255, 255));
 
         pnlWeekSchedule.setPreferredSize(new java.awt.Dimension(650, 450));
         pnlWeekSchedule.setLayout(new java.awt.BorderLayout());
@@ -353,9 +366,11 @@ public class EmployeeProfile extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Lịch làm việc", pnlWorkSchedule);
 
+        pnlSalary.setBackground(new java.awt.Color(255, 255, 255));
         pnlSalary.setMinimumSize(new java.awt.Dimension(0, 550));
         pnlSalary.setPreferredSize(new java.awt.Dimension(568, 550));
 
+        pnlPayrollComponent.setBackground(new java.awt.Color(255, 255, 255));
         pnlPayrollComponent.setPreferredSize(new java.awt.Dimension(500, 439));
         pnlPayrollComponent.setLayout(new java.awt.BorderLayout());
 
@@ -380,6 +395,7 @@ public class EmployeeProfile extends javax.swing.JPanel {
 
         pnlPayrollComponent.add(spPayrollComponent, java.awt.BorderLayout.CENTER);
 
+        pnlEmployeeInfo1.setBackground(new java.awt.Color(255, 255, 255));
         pnlEmployeeInfo1.setLayout(new java.awt.GridBagLayout());
 
         lblTotal.setText("Lương thực nhận:");
@@ -459,6 +475,7 @@ public class EmployeeProfile extends javax.swing.JPanel {
         gridBagConstraints.weightx = 2.0;
         pnlEmployeeInfo1.add(txtDate, gridBagConstraints);
 
+        pnlFilter.setBackground(new java.awt.Color(255, 255, 255));
         pnlFilter.setLayout(new java.awt.GridBagLayout());
 
         lblMonth.setText("Tháng:");
@@ -508,11 +525,16 @@ public class EmployeeProfile extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Lương", pnlSalary);
 
+        pnlContract.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlEmployeeContract.setBackground(new java.awt.Color(255, 255, 255));
+
         lblEmployeeContract.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblEmployeeContract.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblEmployeeContract.setText("HỢP ĐỒNG LAO ĐỘNG");
         pnlEmployeeContract.add(lblEmployeeContract);
 
+        pnlEmployeeInfo.setBackground(new java.awt.Color(255, 255, 255));
         pnlEmployeeInfo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin nhân viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
         pnlEmployeeInfo.setLayout(new java.awt.GridBagLayout());
 
@@ -592,6 +614,7 @@ public class EmployeeProfile extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 20, 10);
         pnlEmployeeInfo.add(txtEmployeeID1, gridBagConstraints);
 
+        pnlContractInfo.setBackground(new java.awt.Color(255, 255, 255));
         pnlContractInfo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin hợp đồng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
         pnlContractInfo.setLayout(new java.awt.GridBagLayout());
 
@@ -702,6 +725,7 @@ public class EmployeeProfile extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 10);
         pnlContractInfo.add(txtDescription, gridBagConstraints);
 
+        pnlSalaryTerms.setBackground(new java.awt.Color(255, 255, 255));
         pnlSalaryTerms.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Điều khoản lương", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
         pnlSalaryTerms.setLayout(new java.awt.GridBagLayout());
 
