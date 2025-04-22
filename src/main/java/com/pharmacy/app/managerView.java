@@ -30,8 +30,8 @@ public class managerView extends javax.swing.JFrame {
      * Creates new form pagehome
      */
     boolean a = true;
-    private Color colorEntered = new Color(74,130,130);
-    private Color colorExited = new Color(0,153,153);
+    private Color colorEntered = new Color(120,168,191);
+    private Color colorExited = new Color(0,102,153);
     private CardLayout cardlayout = new CardLayout();
     private HomeSales2 homesales = new HomeSales2();
     
@@ -83,21 +83,21 @@ public class managerView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        HeaderPn.setBackground(new java.awt.Color(0, 102, 102));
+        HeaderPn.setBackground(new java.awt.Color(0, 51, 102));
         HeaderPn.setPreferredSize(new java.awt.Dimension(1000, 45));
         HeaderPn.setLayout(new java.awt.BorderLayout());
 
-        iconExit.setBackground(new java.awt.Color(0, 102, 102));
+        iconExit.setBackground(new java.awt.Color(0, 51, 102));
         iconExit.setMinimumSize(new java.awt.Dimension(150, 100));
         iconExit.setPreferredSize(new java.awt.Dimension(132, 120));
         iconExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnClose.setBackground(new java.awt.Color(0, 102, 102));
+        btnClose.setBackground(new java.awt.Color(0, 51, 102));
         btnClose.setMaximumSize(new java.awt.Dimension(45, 45));
         btnClose.setMinimumSize(new java.awt.Dimension(45, 45));
         btnClose.setPreferredSize(new java.awt.Dimension(45, 45));
 
-        closeicon.setBackground(new java.awt.Color(0, 102, 102));
+        closeicon.setBackground(new java.awt.Color(0, 51, 102));
         closeicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/closeWindow.png"))); // NOI18N
         closeicon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -130,12 +130,12 @@ public class managerView extends javax.swing.JFrame {
 
         iconExit.add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 45, 45));
 
-        btnMax.setBackground(new java.awt.Color(0, 102, 102));
+        btnMax.setBackground(new java.awt.Color(0, 51, 102));
         btnMax.setMaximumSize(new java.awt.Dimension(45, 45));
         btnMax.setMinimumSize(new java.awt.Dimension(45, 45));
         btnMax.setPreferredSize(new java.awt.Dimension(45, 45));
 
-        minmaxicon.setBackground(new java.awt.Color(0, 102, 102));
+        minmaxicon.setBackground(new java.awt.Color(0, 51, 102));
         minmaxicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maxWindow.png"))); // NOI18N
         minmaxicon.setText("jLabel1");
         minmaxicon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -176,17 +176,17 @@ public class managerView extends javax.swing.JFrame {
         MenuPn.setPreferredSize(new java.awt.Dimension(250, 450));
         MenuPn.setLayout(new java.awt.BorderLayout());
 
-        MenuIcon.setBackground(new java.awt.Color(0, 102, 102));
+        MenuIcon.setBackground(new java.awt.Color(0, 51, 102));
         MenuIcon.setMinimumSize(new java.awt.Dimension(400, 450));
         MenuIcon.setPreferredSize(new java.awt.Dimension(50, 450));
         MenuIcon.setLayout(new javax.swing.BoxLayout(MenuIcon, javax.swing.BoxLayout.Y_AXIS));
 
-        btnBack.setBackground(new java.awt.Color(0, 102, 102));
+        btnBack.setBackground(new java.awt.Color(0, 51, 102));
         btnBack.setForeground(new java.awt.Color(0, 51, 102));
         btnBack.setMaximumSize(new java.awt.Dimension(50, 50));
         btnBack.setMinimumSize(new java.awt.Dimension(50, 50));
 
-        backicon.setBackground(new java.awt.Color(0, 102, 102));
+        backicon.setBackground(new java.awt.Color(0, 51, 102));
         backicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu1.png"))); // NOI18N
         backicon.setText("jLabel4");
         backicon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -220,7 +220,7 @@ public class managerView extends javax.swing.JFrame {
 
         MenuIcon.add(btnBack);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 102));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -235,11 +235,11 @@ public class managerView extends javax.swing.JFrame {
 
         MenuIcon.add(jPanel1);
 
-        btnUser.setBackground(new java.awt.Color(0, 102, 102));
+        btnUser.setBackground(new java.awt.Color(0, 51, 102));
         btnUser.setMaximumSize(new java.awt.Dimension(45, 45));
         btnUser.setPreferredSize(new java.awt.Dimension(45, 45));
 
-        usericon.setBackground(new java.awt.Color(0, 102, 102));
+        usericon.setBackground(new java.awt.Color(0, 51, 102));
         usericon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user1.png"))); // NOI18N
         usericon.setPreferredSize(new java.awt.Dimension(31, 35));
         usericon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -269,11 +269,11 @@ public class managerView extends javax.swing.JFrame {
 
         MenuIcon.add(btnUser);
 
-        btnLogout.setBackground(new java.awt.Color(0, 102, 102));
+        btnLogout.setBackground(new java.awt.Color(0, 51, 102));
         btnLogout.setMaximumSize(new java.awt.Dimension(45, 45));
         btnLogout.setPreferredSize(new java.awt.Dimension(45, 45));
 
-        logouticon.setBackground(new java.awt.Color(0, 102, 102));
+        logouticon.setBackground(new java.awt.Color(0, 51, 102));
         logouticon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         logouticon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -305,14 +305,14 @@ public class managerView extends javax.swing.JFrame {
 
         MenuPn.add(MenuIcon, java.awt.BorderLayout.LINE_START);
 
-        MenuHidePn.setBackground(new java.awt.Color(0, 153, 153));
+        MenuHidePn.setBackground(new java.awt.Color(0, 102, 153));
         MenuHidePn.setAutoscrolls(true);
         MenuHidePn.setMinimumSize(new java.awt.Dimension(200, 555));
         MenuHidePn.setPreferredSize(new java.awt.Dimension(200, 555));
         MenuHidePn.setVerifyInputWhenFocusTarget(false);
         MenuHidePn.setLayout(new java.awt.GridLayout(11, 1, 50, 10));
 
-        saleBtn.setBackground(new java.awt.Color(0, 153, 153));
+        saleBtn.setBackground(new java.awt.Color(0, 102, 153));
         saleBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         saleBtn.setForeground(new java.awt.Color(255, 255, 255));
         saleBtn.setText("BÁN HÀNG");
@@ -347,7 +347,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(saleBtn);
 
-        cusBtn.setBackground(new java.awt.Color(0, 153, 153));
+        cusBtn.setBackground(new java.awt.Color(0, 102, 153));
         cusBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         cusBtn.setForeground(new java.awt.Color(255, 255, 255));
         cusBtn.setText("QUẢN LÝ KHÁCH HÀNG");
@@ -377,7 +377,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(cusBtn);
 
-        promoBtn.setBackground(new java.awt.Color(0, 153, 153));
+        promoBtn.setBackground(new java.awt.Color(0, 102, 153));
         promoBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         promoBtn.setForeground(new java.awt.Color(255, 255, 255));
         promoBtn.setText("QUẢN LÝ KHUYẾN MÃI");
@@ -407,7 +407,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(promoBtn);
 
-        empBtn.setBackground(new java.awt.Color(0, 153, 153));
+        empBtn.setBackground(new java.awt.Color(0, 102, 153));
         empBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         empBtn.setForeground(new java.awt.Color(255, 255, 255));
         empBtn.setText("QUẢN LÝ NHÂN VIÊN");
@@ -437,7 +437,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(empBtn);
 
-        supBtn.setBackground(new java.awt.Color(0, 153, 153));
+        supBtn.setBackground(new java.awt.Color(0, 102, 153));
         supBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         supBtn.setForeground(new java.awt.Color(255, 255, 255));
         supBtn.setText("QUẢN LÝ NHÀ CUNG CẤP");
@@ -467,7 +467,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(supBtn);
 
-        importBtn.setBackground(new java.awt.Color(0, 153, 153));
+        importBtn.setBackground(new java.awt.Color(0, 102, 153));
         importBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         importBtn.setForeground(new java.awt.Color(255, 255, 255));
         importBtn.setText("NHẬP HÀNG");
@@ -498,7 +498,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(importBtn);
 
-        purchaseBtn.setBackground(new java.awt.Color(0, 153, 153));
+        purchaseBtn.setBackground(new java.awt.Color(0, 102, 153));
         purchaseBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         purchaseBtn.setForeground(new java.awt.Color(255, 255, 255));
         purchaseBtn.setText("ĐẶT HÀNG");
@@ -528,7 +528,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(purchaseBtn);
 
-        productBtn.setBackground(new java.awt.Color(0, 153, 153));
+        productBtn.setBackground(new java.awt.Color(0, 102, 153));
         productBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         productBtn.setForeground(new java.awt.Color(255, 255, 255));
         productBtn.setText("QUẢN LÝ SẢN PHẨM");
@@ -558,7 +558,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(productBtn);
 
-        scheduleBtn.setBackground(new java.awt.Color(0, 153, 153));
+        scheduleBtn.setBackground(new java.awt.Color(0, 102, 153));
         scheduleBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         scheduleBtn.setForeground(new java.awt.Color(255, 255, 255));
         scheduleBtn.setText("QUẢN LÝ LỊCH LÀM VIỆC");
@@ -588,7 +588,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(scheduleBtn);
 
-        reportBtn.setBackground(new java.awt.Color(0, 153, 153));
+        reportBtn.setBackground(new java.awt.Color(0, 102, 153));
         reportBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         reportBtn.setForeground(new java.awt.Color(255, 255, 255));
         reportBtn.setText("BÁO CÁO THỐNG KÊ");
@@ -610,7 +610,7 @@ public class managerView extends javax.swing.JFrame {
         });
         MenuHidePn.add(reportBtn);
 
-        infoBtn.setBackground(new java.awt.Color(0, 153, 153));
+        infoBtn.setBackground(new java.awt.Color(0, 102, 153));
         infoBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         infoBtn.setForeground(new java.awt.Color(255, 255, 255));
         infoBtn.setText("THÔNG TIN CÁ NHÂN");
@@ -676,7 +676,7 @@ public class managerView extends javax.swing.JFrame {
     }//GEN-LAST:event_closeiconMouseEntered
 
     private void closeiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeiconMouseExited
-        btnClose.setBackground(new Color(0,102,102));
+        btnClose.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_closeiconMouseExited
 
     private void closeiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeiconMouseClicked
@@ -698,11 +698,11 @@ public class managerView extends javax.swing.JFrame {
     }//GEN-LAST:event_backiconMouseClicked
 
     private void backiconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseEntered
-        btnBack.setBackground(new Color(87, 130, 130));
+        btnBack.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_backiconMouseEntered
 
     private void backiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseExited
-        btnBack.setBackground(new Color(0,102,102));
+        btnBack.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_backiconMouseExited
 
     private void minmaxiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseClicked
@@ -716,11 +716,11 @@ public class managerView extends javax.swing.JFrame {
     }//GEN-LAST:event_minmaxiconMouseClicked
 
     private void minmaxiconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseEntered
-        btnMax.setBackground(new Color(87, 130, 130));
+        btnMax.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_minmaxiconMouseEntered
 
     private void minmaxiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseExited
-        btnMax.setBackground(new Color(0,102,102));
+        btnMax.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_minmaxiconMouseExited
 
     private void saleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saleBtnActionPerformed
@@ -925,11 +925,11 @@ public class managerView extends javax.swing.JFrame {
     }//GEN-LAST:event_reportBtnMouseExited
 
     private void usericonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseEntered
-        btnUser.setBackground(new Color(87, 130, 130));
+        btnUser.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_usericonMouseEntered
 
     private void usericonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseExited
-        btnUser.setBackground(new Color(0,102,102));
+        btnUser.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_usericonMouseExited
 
     private void usericonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseClicked
@@ -939,11 +939,11 @@ public class managerView extends javax.swing.JFrame {
     }//GEN-LAST:event_usericonMouseClicked
 
     private void logouticonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logouticonMouseEntered
-        btnLogout.setBackground(new Color(87, 130, 130));
+        btnLogout.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_logouticonMouseEntered
 
     private void logouticonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logouticonMouseExited
-        btnLogout.setBackground(new Color(0,102,102));
+        btnLogout.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_logouticonMouseExited
 
     

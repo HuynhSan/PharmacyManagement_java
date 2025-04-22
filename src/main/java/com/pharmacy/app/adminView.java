@@ -26,8 +26,8 @@ public class adminView extends javax.swing.JFrame {
      * Creates new form pagehome
      */
     boolean a = true;
-    private Color colorEntered = new Color(145,196,196);
-    private Color colorExited = new Color(0,102,102);
+    private Color colorEntered = new Color(120,168,191);
+    private Color colorExited = new Color(0,102,153);
     private CardLayout cardlayout = new CardLayout();
     
     public adminView() {
@@ -74,20 +74,21 @@ public class adminView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        HeaderPn.setBackground(new java.awt.Color(0, 153, 153));
+        HeaderPn.setBackground(new java.awt.Color(0, 51, 102));
         HeaderPn.setPreferredSize(new java.awt.Dimension(1000, 45));
         HeaderPn.setLayout(new java.awt.BorderLayout());
 
-        iconExit.setBackground(new java.awt.Color(0, 153, 153));
+        iconExit.setBackground(new java.awt.Color(0, 51, 102));
         iconExit.setMinimumSize(new java.awt.Dimension(150, 100));
         iconExit.setPreferredSize(new java.awt.Dimension(132, 120));
         iconExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnClose.setBackground(new java.awt.Color(0, 153, 153));
+        btnClose.setBackground(new java.awt.Color(0, 51, 102));
         btnClose.setMaximumSize(new java.awt.Dimension(45, 45));
         btnClose.setMinimumSize(new java.awt.Dimension(45, 45));
         btnClose.setPreferredSize(new java.awt.Dimension(45, 45));
 
+        closeicon.setBackground(new java.awt.Color(0, 51, 102));
         closeicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/closeWindow.png"))); // NOI18N
         closeicon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -120,7 +121,7 @@ public class adminView extends javax.swing.JFrame {
 
         iconExit.add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 45, 45));
 
-        btnMax.setBackground(new java.awt.Color(0, 153, 153));
+        btnMax.setBackground(new java.awt.Color(0, 51, 102));
         btnMax.setMaximumSize(new java.awt.Dimension(45, 45));
         btnMax.setMinimumSize(new java.awt.Dimension(45, 45));
         btnMax.setPreferredSize(new java.awt.Dimension(45, 45));
@@ -166,17 +167,17 @@ public class adminView extends javax.swing.JFrame {
         MenuPn.setPreferredSize(new java.awt.Dimension(250, 450));
         MenuPn.setLayout(new java.awt.BorderLayout());
 
-        MenuIcon.setBackground(new java.awt.Color(0, 153, 153));
+        MenuIcon.setBackground(new java.awt.Color(0, 51, 102));
         MenuIcon.setMinimumSize(new java.awt.Dimension(400, 450));
         MenuIcon.setPreferredSize(new java.awt.Dimension(50, 450));
         MenuIcon.setLayout(new javax.swing.BoxLayout(MenuIcon, javax.swing.BoxLayout.Y_AXIS));
 
-        btnBack.setBackground(new java.awt.Color(0, 153, 153));
+        btnBack.setBackground(new java.awt.Color(0, 51, 102));
         btnBack.setForeground(new java.awt.Color(0, 51, 102));
         btnBack.setMaximumSize(new java.awt.Dimension(50, 50));
         btnBack.setMinimumSize(new java.awt.Dimension(50, 50));
 
-        backicon.setBackground(new java.awt.Color(204, 204, 204));
+        backicon.setBackground(new java.awt.Color(0, 51, 102));
         backicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu1.png"))); // NOI18N
         backicon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -209,7 +210,7 @@ public class adminView extends javax.swing.JFrame {
 
         MenuIcon.add(btnBack);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 102));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -224,11 +225,11 @@ public class adminView extends javax.swing.JFrame {
 
         MenuIcon.add(jPanel1);
 
-        btnUser.setBackground(new java.awt.Color(0, 153, 153));
+        btnUser.setBackground(new java.awt.Color(0, 51, 102));
         btnUser.setMaximumSize(new java.awt.Dimension(45, 45));
         btnUser.setPreferredSize(new java.awt.Dimension(45, 45));
 
-        usericon.setBackground(new java.awt.Color(0, 153, 153));
+        usericon.setBackground(new java.awt.Color(0, 51, 102));
         usericon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user1.png"))); // NOI18N
         usericon.setPreferredSize(new java.awt.Dimension(31, 35));
         usericon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -258,10 +259,11 @@ public class adminView extends javax.swing.JFrame {
 
         MenuIcon.add(btnUser);
 
-        btnLogout.setBackground(new java.awt.Color(0, 153, 153));
+        btnLogout.setBackground(new java.awt.Color(0, 51, 102));
         btnLogout.setMaximumSize(new java.awt.Dimension(45, 45));
         btnLogout.setPreferredSize(new java.awt.Dimension(45, 45));
 
+        logouticon.setBackground(new java.awt.Color(0, 51, 102));
         logouticon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         logouticon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -294,7 +296,7 @@ public class adminView extends javax.swing.JFrame {
         MenuPn.add(MenuIcon, java.awt.BorderLayout.LINE_START);
         MenuPn.add(Box.createVerticalGlue());
 
-        MenuHidePn.setBackground(new java.awt.Color(0, 102, 102));
+        MenuHidePn.setBackground(new java.awt.Color(0, 102, 153));
         MenuHidePn.setAutoscrolls(true);
         MenuHidePn.setMinimumSize(new java.awt.Dimension(200, 555));
         MenuHidePn.setPreferredSize(new java.awt.Dimension(200, 555));
@@ -481,7 +483,7 @@ public class adminView extends javax.swing.JFrame {
         });
         MenuHidePn.add(productBtn);
 
-        authzBtn.setBackground(new java.awt.Color(0, 102, 102));
+        authzBtn.setBackground(new java.awt.Color(0, 102, 153));
         authzBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         authzBtn.setForeground(new java.awt.Color(255, 255, 255));
         authzBtn.setText("PHÂN QUYỀN");
@@ -575,7 +577,7 @@ public class adminView extends javax.swing.JFrame {
     }//GEN-LAST:event_closeiconMouseEntered
 
     private void closeiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeiconMouseExited
-        btnClose.setBackground(new Color(0,153,153));
+        btnClose.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_closeiconMouseExited
 
     private void closeiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeiconMouseClicked
@@ -597,11 +599,11 @@ public class adminView extends javax.swing.JFrame {
     }//GEN-LAST:event_backiconMouseClicked
 
     private void backiconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseEntered
-        btnBack.setBackground(new Color(127, 163, 163));
+        btnBack.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_backiconMouseEntered
 
     private void backiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseExited
-        btnBack.setBackground(new Color(0,153,153));
+        btnBack.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_backiconMouseExited
 
     private void minmaxiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseClicked
@@ -615,11 +617,11 @@ public class adminView extends javax.swing.JFrame {
     }//GEN-LAST:event_minmaxiconMouseClicked
 
     private void minmaxiconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseEntered
-        btnMax.setBackground(new Color(127, 163, 163));
+        btnMax.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_minmaxiconMouseEntered
 
     private void minmaxiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseExited
-        btnMax.setBackground(new Color(0,153,153));
+        btnMax.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_minmaxiconMouseExited
 
     private void cusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cusBtnActionPerformed
@@ -766,19 +768,19 @@ public class adminView extends javax.swing.JFrame {
     }//GEN-LAST:event_reportBtnMouseExited
 
     private void usericonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseEntered
-        btnUser.setBackground(new Color(127, 163, 163));
+        btnUser.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_usericonMouseEntered
 
     private void usericonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseExited
-        btnUser.setBackground(new Color(0, 153, 153));
+        btnUser.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_usericonMouseExited
 
     private void logouticonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logouticonMouseEntered
-        btnLogout.setBackground(new Color(127, 163, 163));
+        btnLogout.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_logouticonMouseEntered
 
     private void logouticonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logouticonMouseExited
-        btnLogout.setBackground(new Color(0, 153, 153));
+        btnLogout.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_logouticonMouseExited
 
     private void usericonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseClicked
