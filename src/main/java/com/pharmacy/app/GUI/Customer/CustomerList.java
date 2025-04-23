@@ -36,23 +36,24 @@ public class CustomerList extends javax.swing.JPanel {
         plSearch = new javax.swing.JPanel();
         cbSort = new javax.swing.JComboBox<>();
         txtSearch1 = new javax.swing.JTextField();
-        plButton = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnRefesh = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
         plCustomerList = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbCustomerList = new javax.swing.JTable();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(326589, 326589));
         setMinimumSize(new java.awt.Dimension(986, 578));
-        setPreferredSize(new java.awt.Dimension(986, 578));
+        setPreferredSize(new java.awt.Dimension(986, 550));
         setLayout(new java.awt.BorderLayout());
 
         plHeader.setBackground(new java.awt.Color(255, 255, 255));
         plHeader.setMaximumSize(new java.awt.Dimension(800, 100));
         plHeader.setMinimumSize(new java.awt.Dimension(800, 100));
+        plHeader.setPreferredSize(new java.awt.Dimension(800, 100));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -74,19 +75,18 @@ public class CustomerList extends javax.swing.JPanel {
         txtSearch1.setPreferredSize(new java.awt.Dimension(300, 30));
         plSearch.add(txtSearch1);
 
-        plButton.setBackground(new java.awt.Color(255, 255, 255));
-        plButton.setMaximumSize(new java.awt.Dimension(300, 70));
-        plButton.setMinimumSize(new java.awt.Dimension(300, 70));
-        plButton.setPreferredSize(new java.awt.Dimension(300, 70));
-        plButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 15));
-
         btnAdd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnAdd.setText("Thêm");
         btnAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnAdd.setMaximumSize(new java.awt.Dimension(75, 30));
         btnAdd.setMinimumSize(new java.awt.Dimension(75, 30));
         btnAdd.setPreferredSize(new java.awt.Dimension(75, 30));
-        plButton.add(btnAdd);
+        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddMouseClicked(evt);
+            }
+        });
+        plSearch.add(btnAdd);
 
         btnRefesh.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRefesh.setText("Làm mới");
@@ -94,24 +94,21 @@ public class CustomerList extends javax.swing.JPanel {
         btnRefesh.setMaximumSize(new java.awt.Dimension(90, 30));
         btnRefesh.setMinimumSize(new java.awt.Dimension(90, 30));
         btnRefesh.setPreferredSize(new java.awt.Dimension(90, 30));
-        plButton.add(btnRefesh);
+        plSearch.add(btnRefesh);
 
         lblImg.setBackground(new java.awt.Color(255, 255, 255));
         lblImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
-        plButton.add(lblImg);
+        plSearch.add(lblImg);
 
         javax.swing.GroupLayout plHeaderLayout = new javax.swing.GroupLayout(plHeader);
         plHeader.setLayout(plHeaderLayout);
         plHeaderLayout.setHorizontalGroup(
             plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(plHeaderLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 209, Short.MAX_VALUE))
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
+                .addGap(106, 106, 106))
+            .addComponent(plSearch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         plHeaderLayout.setVerticalGroup(
             plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,17 +116,15 @@ public class CustomerList extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         add(plHeader, java.awt.BorderLayout.NORTH);
 
         plCustomerList.setBackground(new java.awt.Color(255, 255, 255));
         plCustomerList.setMaximumSize(new java.awt.Dimension(326589, 326589));
-        plCustomerList.setMinimumSize(new java.awt.Dimension(1050, 450));
-        plCustomerList.setPreferredSize(new java.awt.Dimension(1200, 450));
+        plCustomerList.setMinimumSize(new java.awt.Dimension(800, 450));
+        plCustomerList.setPreferredSize(new java.awt.Dimension(800, 450));
         plCustomerList.setLayout(new java.awt.BorderLayout());
 
         jScrollPane1.setMaximumSize(new java.awt.Dimension(326589, 326589));
@@ -165,15 +160,19 @@ public class CustomerList extends javax.swing.JPanel {
 
         plCustomerList.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        add(plCustomerList, java.awt.BorderLayout.SOUTH);
-    }// </editor-fold>//GEN-END:initComponents
-private void btnRefeshActionPerformed(java.awt.event.ActionEvent evt) {
-    // TODO: xử lý khi nhấn nút Refresh
-}
+        jSeparator1.setMaximumSize(new java.awt.Dimension(700, 10));
+        jSeparator1.setMinimumSize(new java.awt.Dimension(700, 10));
+        jSeparator1.setPreferredSize(new java.awt.Dimension(700, 10));
+        plCustomerList.add(jSeparator1, java.awt.BorderLayout.NORTH);
 
-private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
-    // TODO: xử lý khi nhấn nút Thêm
-}
+        add(plCustomerList, java.awt.BorderLayout.CENTER);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
+        AddCustomer addDialog = new AddCustomer((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addDialog.setVisible(true);
+    }//GEN-LAST:event_btnAddMouseClicked
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -182,8 +181,8 @@ private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JComboBox<String> cbSort;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblImg;
-    private javax.swing.JPanel plButton;
     private javax.swing.JPanel plCustomerList;
     private javax.swing.JPanel plHeader;
     private javax.swing.JPanel plSearch;

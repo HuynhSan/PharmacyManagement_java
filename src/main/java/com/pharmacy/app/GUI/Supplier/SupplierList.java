@@ -4,6 +4,9 @@
  */
 package com.pharmacy.app.GUI.Supplier;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author BOI QUAN
@@ -31,7 +34,6 @@ public class SupplierList extends javax.swing.JPanel {
         plSearch = new javax.swing.JPanel();
         cbSort = new javax.swing.JComboBox<>();
         txtSearch = new javax.swing.JTextField();
-        plButton = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnRefesh = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
@@ -71,19 +73,18 @@ public class SupplierList extends javax.swing.JPanel {
         txtSearch.setPreferredSize(new java.awt.Dimension(300, 30));
         plSearch.add(txtSearch);
 
-        plButton.setBackground(new java.awt.Color(255, 255, 255));
-        plButton.setMaximumSize(new java.awt.Dimension(300, 70));
-        plButton.setMinimumSize(new java.awt.Dimension(300, 70));
-        plButton.setPreferredSize(new java.awt.Dimension(300, 70));
-        plButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 15));
-
         btnAdd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnAdd.setText("Thêm");
         btnAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnAdd.setMaximumSize(new java.awt.Dimension(75, 30));
         btnAdd.setMinimumSize(new java.awt.Dimension(75, 30));
         btnAdd.setPreferredSize(new java.awt.Dimension(75, 30));
-        plButton.add(btnAdd);
+        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddMouseClicked(evt);
+            }
+        });
+        plSearch.add(btnAdd);
 
         btnRefesh.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRefesh.setText("Làm mới");
@@ -91,34 +92,28 @@ public class SupplierList extends javax.swing.JPanel {
         btnRefesh.setMaximumSize(new java.awt.Dimension(90, 30));
         btnRefesh.setMinimumSize(new java.awt.Dimension(90, 30));
         btnRefesh.setPreferredSize(new java.awt.Dimension(90, 30));
-        plButton.add(btnRefesh);
+        plSearch.add(btnRefesh);
 
         lblImg.setBackground(new java.awt.Color(255, 255, 255));
         lblImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
-        plButton.add(lblImg);
+        plSearch.add(lblImg);
 
         javax.swing.GroupLayout plHeaderLayout = new javax.swing.GroupLayout(plHeader);
         plHeader.setLayout(plHeaderLayout);
         plHeaderLayout.setHorizontalGroup(
             plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(plHeaderLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 23, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(plSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
         );
         plHeaderLayout.setVerticalGroup(
             plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(plHeaderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         add(plHeader, java.awt.BorderLayout.NORTH);
@@ -172,6 +167,12 @@ public class SupplierList extends javax.swing.JPanel {
         add(plSupplierList, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
+        AddSupplier addDialog = new AddSupplier((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addDialog.setLocationRelativeTo(null);
+        addDialog.setVisible(true);
+    }//GEN-LAST:event_btnAddMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
@@ -181,7 +182,6 @@ public class SupplierList extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblImg;
-    private javax.swing.JPanel plButton;
     private javax.swing.JPanel plHeader;
     private javax.swing.JPanel plSearch;
     private javax.swing.JPanel plSupplierList;

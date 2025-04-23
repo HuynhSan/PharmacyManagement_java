@@ -232,7 +232,16 @@ public class WorkScheduleManagement extends javax.swing.JPanel {
         tblShiftList.setShowGrid(true);
         jScrollPane3.setViewportView(tblShiftList);
 
-        pnlShiftList.add(jScrollPane3);
+        javax.swing.GroupLayout pnlShiftListLayout = new javax.swing.GroupLayout(pnlShiftList);
+        pnlShiftList.setLayout(pnlShiftListLayout);
+        pnlShiftListLayout.setHorizontalGroup(
+            pnlShiftListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+        );
+        pnlShiftListLayout.setVerticalGroup(
+            pnlShiftListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+        );
 
         pnlWorkShift.add(pnlShiftList, java.awt.BorderLayout.CENTER);
 

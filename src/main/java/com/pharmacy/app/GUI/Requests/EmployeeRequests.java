@@ -4,6 +4,10 @@
  */
 package com.pharmacy.app.GUI.Requests;
 
+import com.pharmacy.app.GUI.Sales.PaymentDialog;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author phong
@@ -166,7 +170,9 @@ public class EmployeeRequests extends javax.swing.JPanel {
     }//GEN-LAST:event_cbRequestTypeActionPerformed
 
     private void btnAddRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRequestActionPerformed
-        // TODO add your handling code here:
+        AddRequest addDialog = new AddRequest((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addDialog.setLocationRelativeTo(null);
+        addDialog.setVisible(true);
     }//GEN-LAST:event_btnAddRequestActionPerformed
 
     private void btnRefeshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefeshActionPerformed

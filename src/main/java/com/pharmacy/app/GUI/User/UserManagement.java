@@ -4,6 +4,10 @@
  */
 package com.pharmacy.app.GUI.User;
 
+import com.pharmacy.app.GUI.Sales.PaymentDialog;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author phong
@@ -143,14 +147,14 @@ public class UserManagement extends javax.swing.JPanel {
         pnlUser2.setLayout(pnlUser2Layout);
         pnlUser2Layout.setHorizontalGroup(
             pnlUser2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE)
         );
         pnlUser2Layout.setVerticalGroup(
             pnlUser2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlUser2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         add(pnlUser2, java.awt.BorderLayout.CENTER);
@@ -165,7 +169,9 @@ public class UserManagement extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSearchUserActionPerformed
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
-        // TODO add your handling code here:
+        AddUser addDialog = new AddUser((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addDialog.setLocationRelativeTo(null);
+        addDialog.setVisible(true);
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnRefeshUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefeshUserActionPerformed

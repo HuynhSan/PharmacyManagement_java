@@ -14,7 +14,7 @@ import com.pharmacy.app.GUI.Product.MedicalProducts;
 import java.awt.*;
 import javax.swing.*;
 import com.pharmacy.app.GUI.Promo.*;
-import com.pharmacy.app.GUI.Sales.HomeSales2;
+import com.pharmacy.app.GUI.Sales.HomeSales;
 import com.pharmacy.app.GUI.Supplier.SupplierList;
 import com.pharmacy.app.GUI.User.UserInfo;
 import com.pharmacy.app.GUI.User.UserManagement;
@@ -33,7 +33,7 @@ public class managerView extends javax.swing.JFrame {
     private Color colorEntered = new Color(120,168,191);
     private Color colorExited = new Color(0,102,153);
     private CardLayout cardlayout = new CardLayout();
-    private HomeSales2 homesales = new HomeSales2();
+    private HomeSales homesales = new HomeSales();
     
     public managerView() {
         initComponents();

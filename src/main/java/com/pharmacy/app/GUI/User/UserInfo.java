@@ -4,6 +4,9 @@
  */
 package com.pharmacy.app.GUI.User;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author LENOVO
@@ -140,6 +143,11 @@ public class UserInfo extends javax.swing.JDialog {
         btnChangePassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnChangePassword.setForeground(new java.awt.Color(255, 255, 255));
         btnChangePassword.setText("Đổi mật khẩu");
+        btnChangePassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangePasswordActionPerformed(evt);
+            }
+        });
         pnlButton.add(btnChangePassword);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,6 +184,12 @@ public class UserInfo extends javax.swing.JDialog {
     private void txtRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRoleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRoleActionPerformed
+
+    private void btnChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangePasswordActionPerformed
+        UpdateUserPassword updatepassDialog = new UpdateUserPassword((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        updatepassDialog.setLocationRelativeTo(null);
+        updatepassDialog.setVisible(true);
+    }//GEN-LAST:event_btnChangePasswordActionPerformed
 
     /**
      * @param args the command line arguments

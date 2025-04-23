@@ -110,12 +110,16 @@ public class PaymentDialog extends javax.swing.JDialog {
         jPanel2.setPreferredSize(new java.awt.Dimension(300, 30));
         jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 5));
 
-        btnCancel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCancel.setBackground(new java.awt.Color(255, 0, 0));
+        btnCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnCancel.setText("Hủy");
         btnCancel.setPreferredSize(new java.awt.Dimension(80, 25));
         jPanel2.add(btnCancel);
 
-        btnConfirmPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnConfirmPayment.setBackground(new java.awt.Color(0, 204, 51));
+        btnConfirmPayment.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnConfirmPayment.setForeground(new java.awt.Color(255, 255, 255));
         btnConfirmPayment.setText("Xác nhận");
         btnConfirmPayment.setPreferredSize(new java.awt.Dimension(90, 25));
         jPanel2.add(btnConfirmPayment);

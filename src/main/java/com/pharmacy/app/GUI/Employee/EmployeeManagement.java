@@ -4,6 +4,9 @@
  */
 package com.pharmacy.app.GUI.Employee;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author phong
@@ -29,10 +32,8 @@ public class EmployeeManagement extends javax.swing.JPanel {
         tpEmployeeManagement = new javax.swing.JTabbedPane();
         pnlEmployees = new javax.swing.JPanel();
         pnlEmployee1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         txtSearchEmployee = new javax.swing.JTextField();
         cbEmployee = new javax.swing.JComboBox<>();
-        pnlEmployeeButton = new javax.swing.JPanel();
         btnAddEmployee = new javax.swing.JButton();
         btnRefeshEmployee = new javax.swing.JButton();
         btnPdfEmployee = new javax.swing.JButton();
@@ -41,10 +42,8 @@ public class EmployeeManagement extends javax.swing.JPanel {
         tblEmployees = new javax.swing.JTable();
         pnlContracts = new javax.swing.JPanel();
         pnlContract1 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
         txtSearchContract = new javax.swing.JTextField();
         cbContract = new javax.swing.JComboBox<>();
-        pnlContractButton = new javax.swing.JPanel();
         btnAddContract = new javax.swing.JButton();
         btnRefeshContract = new javax.swing.JButton();
         btnPdfContract = new javax.swing.JButton();
@@ -54,24 +53,19 @@ public class EmployeeManagement extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText("");
-        setPreferredSize(new java.awt.Dimension(1200, 508));
+        setPreferredSize(new java.awt.Dimension(900, 508));
         setLayout(new java.awt.BorderLayout());
 
         tpEmployeeManagement.setBackground(new java.awt.Color(255, 255, 255));
-        tpEmployeeManagement.setPreferredSize(new java.awt.Dimension(1200, 529));
+        tpEmployeeManagement.setPreferredSize(new java.awt.Dimension(900, 529));
 
         pnlEmployees.setBackground(new java.awt.Color(255, 255, 255));
-        pnlEmployees.setPreferredSize(new java.awt.Dimension(1180, 700));
+        pnlEmployees.setPreferredSize(new java.awt.Dimension(900, 700));
         pnlEmployees.setLayout(new java.awt.BorderLayout());
 
         pnlEmployee1.setBackground(new java.awt.Color(255, 255, 255));
         pnlEmployee1.setToolTipText("");
         pnlEmployee1.setPreferredSize(new java.awt.Dimension(1180, 70));
-        pnlEmployee1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(500, 70));
-        jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         txtSearchEmployee.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtSearchEmployee.setForeground(new java.awt.Color(153, 153, 153));
@@ -79,30 +73,17 @@ public class EmployeeManagement extends javax.swing.JPanel {
         txtSearchEmployee.setHighlighter(null);
         txtSearchEmployee.setMinimumSize(new java.awt.Dimension(250, 22));
         txtSearchEmployee.setPreferredSize(new java.awt.Dimension(300, 35));
-        txtSearchEmployee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSearchEmployeeActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txtSearchEmployee);
+        pnlEmployee1.add(txtSearchEmployee);
 
         cbEmployee.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Nam", "Nữ" }));
         cbEmployee.setFocusable(false);
         cbEmployee.setMinimumSize(new java.awt.Dimension(80, 22));
         cbEmployee.setPreferredSize(new java.awt.Dimension(80, 35));
-        cbEmployee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbEmployeeActionPerformed(evt);
-            }
-        });
-        jPanel2.add(cbEmployee);
+        pnlEmployee1.add(cbEmployee);
 
-        pnlEmployee1.add(jPanel2);
-
-        pnlEmployeeButton.setBackground(new java.awt.Color(255, 255, 255));
-        pnlEmployeeButton.setPreferredSize(new java.awt.Dimension(680, 70));
-        pnlEmployeeButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
+        btnAddEmployee.setBackground(new java.awt.Color(0, 204, 51));
+        btnAddEmployee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnAddEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnAddEmployee.setText("Thêm");
         btnAddEmployee.setFocusable(false);
         btnAddEmployee.setMaximumSize(new java.awt.Dimension(72, 22));
@@ -113,7 +94,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
                 btnAddEmployeeActionPerformed(evt);
             }
         });
-        pnlEmployeeButton.add(btnAddEmployee);
+        pnlEmployee1.add(btnAddEmployee);
 
         btnRefeshEmployee.setText("Tải lại");
         btnRefeshEmployee.setFocusable(false);
@@ -125,21 +106,14 @@ public class EmployeeManagement extends javax.swing.JPanel {
                 btnRefeshEmployeeActionPerformed(evt);
             }
         });
-        pnlEmployeeButton.add(btnRefeshEmployee);
+        pnlEmployee1.add(btnRefeshEmployee);
 
         btnPdfEmployee.setText("In PDF");
         btnPdfEmployee.setFocusable(false);
         btnPdfEmployee.setMaximumSize(new java.awt.Dimension(72, 22));
         btnPdfEmployee.setMinimumSize(new java.awt.Dimension(72, 22));
         btnPdfEmployee.setPreferredSize(new java.awt.Dimension(80, 35));
-        btnPdfEmployee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPdfEmployeeActionPerformed(evt);
-            }
-        });
-        pnlEmployeeButton.add(btnPdfEmployee);
-
-        pnlEmployee1.add(pnlEmployeeButton);
+        pnlEmployee1.add(btnPdfEmployee);
 
         pnlEmployees.add(pnlEmployee1, java.awt.BorderLayout.NORTH);
 
@@ -171,71 +145,43 @@ public class EmployeeManagement extends javax.swing.JPanel {
         tblEmployees.setShowGrid(true);
         jScrollPane1.setViewportView(tblEmployees);
 
-        pnlEmployee2.add(jScrollPane1);
+        javax.swing.GroupLayout pnlEmployee2Layout = new javax.swing.GroupLayout(pnlEmployee2);
+        pnlEmployee2.setLayout(pnlEmployee2Layout);
+        pnlEmployee2Layout.setHorizontalGroup(
+            pnlEmployee2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+        );
+        pnlEmployee2Layout.setVerticalGroup(
+            pnlEmployee2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEmployee2Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         pnlEmployees.add(pnlEmployee2, java.awt.BorderLayout.CENTER);
 
         tpEmployeeManagement.addTab("Nhân viên", pnlEmployees);
 
         pnlContracts.setBackground(new java.awt.Color(255, 255, 255));
-        pnlContracts.setPreferredSize(new java.awt.Dimension(1200, 800));
+        pnlContracts.setPreferredSize(new java.awt.Dimension(900, 500));
         pnlContracts.setLayout(new java.awt.BorderLayout());
 
         pnlContract1.setBackground(new java.awt.Color(255, 255, 255));
         pnlContract1.setToolTipText("");
         pnlContract1.setPreferredSize(new java.awt.Dimension(1200, 70));
-        pnlContract1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 5));
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(600, 70));
 
         txtSearchContract.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtSearchContract.setForeground(new java.awt.Color(153, 153, 153));
         txtSearchContract.setText("Tìm kiếm");
         txtSearchContract.setHighlighter(null);
         txtSearchContract.setMinimumSize(new java.awt.Dimension(250, 22));
-        txtSearchContract.setPreferredSize(new java.awt.Dimension(500, 35));
-        txtSearchContract.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSearchContractActionPerformed(evt);
-            }
-        });
+        txtSearchContract.setPreferredSize(new java.awt.Dimension(300, 35));
+        pnlContract1.add(txtSearchContract);
 
         cbContract.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Quản lý", "Nhân viên" }));
         cbContract.setFocusable(false);
         cbContract.setPreferredSize(new java.awt.Dimension(80, 35));
-        cbContract.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbContractActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtSearchContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearchContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-
-        pnlContract1.add(jPanel1);
-
-        pnlContractButton.setBackground(new java.awt.Color(255, 255, 255));
-        pnlContractButton.setPreferredSize(new java.awt.Dimension(600, 70));
-        pnlContractButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 5));
+        pnlContract1.add(cbContract);
 
         btnAddContract.setBackground(new java.awt.Color(0, 204, 51));
         btnAddContract.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -250,7 +196,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
                 btnAddContractActionPerformed(evt);
             }
         });
-        pnlContractButton.add(btnAddContract);
+        pnlContract1.add(btnAddContract);
 
         btnRefeshContract.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRefeshContract.setText("Tải lại");
@@ -258,12 +204,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
         btnRefeshContract.setMaximumSize(new java.awt.Dimension(72, 22));
         btnRefeshContract.setMinimumSize(new java.awt.Dimension(80, 35));
         btnRefeshContract.setPreferredSize(new java.awt.Dimension(80, 35));
-        btnRefeshContract.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefeshContractActionPerformed(evt);
-            }
-        });
-        pnlContractButton.add(btnRefeshContract);
+        pnlContract1.add(btnRefeshContract);
 
         btnPdfContract.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPdfContract.setText("In PDF");
@@ -271,14 +212,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
         btnPdfContract.setMaximumSize(new java.awt.Dimension(72, 22));
         btnPdfContract.setMinimumSize(new java.awt.Dimension(80, 35));
         btnPdfContract.setPreferredSize(new java.awt.Dimension(80, 35));
-        btnPdfContract.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPdfContractActionPerformed(evt);
-            }
-        });
-        pnlContractButton.add(btnPdfContract);
-
-        pnlContract1.add(pnlContractButton);
+        pnlContract1.add(btnPdfContract);
 
         pnlContracts.add(pnlContract1, java.awt.BorderLayout.NORTH);
 
@@ -313,7 +247,18 @@ public class EmployeeManagement extends javax.swing.JPanel {
         tbContracts.setShowGrid(true);
         jScrollPane2.setViewportView(tbContracts);
 
-        pnlContract2.add(jScrollPane2);
+        javax.swing.GroupLayout pnlContract2Layout = new javax.swing.GroupLayout(pnlContract2);
+        pnlContract2.setLayout(pnlContract2Layout);
+        pnlContract2Layout.setHorizontalGroup(
+            pnlContract2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+        );
+        pnlContract2Layout.setVerticalGroup(
+            pnlContract2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContract2Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pnlContracts.add(pnlContract2, java.awt.BorderLayout.CENTER);
 
@@ -322,45 +267,21 @@ public class EmployeeManagement extends javax.swing.JPanel {
         add(tpEmployeeManagement, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSearchEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchEmployeeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSearchEmployeeActionPerformed
-
-    private void cbEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEmployeeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbEmployeeActionPerformed
-
-    private void btnAddEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEmployeeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddEmployeeActionPerformed
-
     private void btnRefeshEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefeshEmployeeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRefeshEmployeeActionPerformed
 
-    private void btnPdfEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPdfEmployeeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPdfEmployeeActionPerformed
-
-    private void txtSearchContractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchContractActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSearchContractActionPerformed
-
-    private void cbContractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbContractActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbContractActionPerformed
+    private void btnAddEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEmployeeActionPerformed
+        AddEmployee addEmDialog = new AddEmployee((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addEmDialog.setLocationRelativeTo(null);
+        addEmDialog.setVisible(true);
+    }//GEN-LAST:event_btnAddEmployeeActionPerformed
 
     private void btnAddContractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddContractActionPerformed
-        // TODO add your handling code here:
+        AddContract addConDialog = new AddContract((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addConDialog.setLocationRelativeTo(null);
+        addConDialog.setVisible(true);
     }//GEN-LAST:event_btnAddContractActionPerformed
-
-    private void btnRefeshContractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefeshContractActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRefeshContractActionPerformed
-
-    private void btnPdfContractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPdfContractActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPdfContractActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -372,17 +293,13 @@ public class EmployeeManagement extends javax.swing.JPanel {
     private javax.swing.JButton btnRefeshEmployee;
     private javax.swing.JComboBox<String> cbContract;
     private javax.swing.JComboBox<String> cbEmployee;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel pnlContract1;
     private javax.swing.JPanel pnlContract2;
-    private javax.swing.JPanel pnlContractButton;
     private javax.swing.JPanel pnlContracts;
     private javax.swing.JPanel pnlEmployee1;
     private javax.swing.JPanel pnlEmployee2;
-    private javax.swing.JPanel pnlEmployeeButton;
     private javax.swing.JPanel pnlEmployees;
     private javax.swing.JTable tbContracts;
     private javax.swing.JTable tblEmployees;
