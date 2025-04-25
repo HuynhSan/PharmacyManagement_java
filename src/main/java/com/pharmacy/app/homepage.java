@@ -25,7 +25,7 @@ import com.pharmacy.app.GUI.User.UserManagement;
 public class homepage extends javax.swing.JFrame {
 
     /**
-     * Creates new form pagehome
+     * Creates new form homapage
      */
     boolean a = true;
     private Color colorEntered = new Color(120,168,191);
@@ -72,7 +72,6 @@ public class homepage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1000, 495));
 
         HeaderPn.setBackground(new java.awt.Color(0, 51, 102));
         HeaderPn.setPreferredSize(new java.awt.Dimension(1000, 45));
@@ -575,27 +574,6 @@ public class homepage extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_closeiconMouseClicked
 
-    private void backiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseClicked
-         if(a==true){
-          hideshow(MenuPn, a, backicon);
-          SwingUtilities.updateComponentTreeUI(this);
-          a=false;
-        }
-        else{
-            hideshow(MenuPn, a, backicon);
-            SwingUtilities.updateComponentTreeUI(this);
-            a=true;
-        }
-    }//GEN-LAST:event_backiconMouseClicked
-
-    private void backiconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseEntered
-        btnBack.setBackground(new Color(81, 115, 150));
-    }//GEN-LAST:event_backiconMouseEntered
-
-    private void backiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseExited
-        btnBack.setBackground(new Color(0,51,102));
-    }//GEN-LAST:event_backiconMouseExited
-
     private void minmaxiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseClicked
         btnMax.setBackground(new Color(81, 115, 150));
         if (this.getExtendedState() != homepage.MAXIMIZED_BOTH){
@@ -808,6 +786,27 @@ public class homepage extends javax.swing.JFrame {
         ContentPn.add(new HomeSales2(), "Sales");
         switchToPanel("Sales");
     }//GEN-LAST:event_saleBtnMouseClicked
+
+    private void backiconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseExited
+        btnBack.setBackground(new Color(0,51,102));
+    }//GEN-LAST:event_backiconMouseExited
+
+    private void backiconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseEntered
+        btnBack.setBackground(new Color(81, 115, 150));
+    }//GEN-LAST:event_backiconMouseEntered
+
+    private void backiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backiconMouseClicked
+        if(a==true){
+            hideshow(MenuPn, a, backicon);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=false;
+        }
+        else{
+            hideshow(MenuPn, a, backicon);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
+    }//GEN-LAST:event_backiconMouseClicked
 
     
     public static void main(String args[]) {
