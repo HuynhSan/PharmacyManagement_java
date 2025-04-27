@@ -4,6 +4,11 @@
  */
 package com.pharmacy.app.GUI.Supplier;
 
+import com.pharmacy.app.BUS.SupplierBUS;
+import com.pharmacy.app.DTO.SupplierDTO;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author BOI QUAN
@@ -15,6 +20,7 @@ public class SupplierList extends javax.swing.JPanel {
      */
     public SupplierList() {
         initComponents();
+        loadSupplierList();
     }
 
     /**
@@ -117,7 +123,6 @@ public class SupplierList extends javax.swing.JPanel {
 
         tbSupplierList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"NCC1", "Công ty TNHH ABC", "0123456789", "123 Đường 18 P2 Q6 TP.HCM"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
@@ -148,7 +153,22 @@ public class SupplierList extends javax.swing.JPanel {
 
         add(plSupplierList);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private void loadSupplierList(){
+        SupplierBUS supplierBUS = new SupplierBUS();
+        List<SupplierDTO> suppliersList = supplierBUS.getAllSuppliers();
+        DefaultTableModel model = (DefaultTableModel) tbSupplierList.getModel();
+        model.setRowCount(0);
+        
+        for (SupplierDTO s: suppliersList){
+            model.addRow(new Object[]{
+                s.getId(),
+                s.getName(),
+                s.getPhone(),
+                s.getAddress()
+            });
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;

@@ -26,7 +26,7 @@ public class MyConnection {
 
             String url = "jdbc:sqlserver://localhost:1433;databaseName=pharmacy;trustServerCertificate=true";
             String user = "sa";
-            String password = "12345@12345";
+            String password = "123456";
             con = DriverManager.getConnection(url, user, password);
 
             stm = con.createStatement();

@@ -1,58 +1,61 @@
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\App.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\dao\categoryDAO.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\dao\MyConnection.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\AddRole.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\AuthorizationManagement.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\UpdateRole.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Customer\AddCustomer.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Customer\CustomerDetail.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Customer\CustomerList.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\AddContract.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\AddEmployee.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\EmployeeManagement.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\EmployeeProfile.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\UpdateContract.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\UpdateEmployee.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\ConfirmStockIn.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\InvoicesHistory.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\POApproval.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\PODetails.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\POList.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\PurchaseOrder.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\UpdatePO.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\AddMedicine.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\MedicineDetails.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\MedicinesBatch.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\MedicinesList.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\UpdateMedicine.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\AddPayroll.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\EmployeePayroll.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\PayrollDetails.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\PayrollManagement.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\AddPromo.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\AdjustPromo.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\HomePromo.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\PromoDetail.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Requests\AddRequest.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Requests\EmployeeRequests.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Requests\UpdateRequest.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\HomeSales.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\HomeSales2.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\InvoicePanel.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\PaymentDialog.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\SalesPanel.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\AddSupplier.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\SupplierDetail.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\SupplierList.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\UpdateSupplier.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\AddUser.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UpdateUser.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UpdateUserPassword.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UserInfo.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UserManagement.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\WorkSchedule\WorkScheduleManagement.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\homepage.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\homepage1.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\model\Promotion.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\model\PurchaseOrderDetails.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\testconnect.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\App.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\BUS\SupplierBUS.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\dao\categoryDAO.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\dao\MyConnection.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\dao\SupplierDAO.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\DTO\SupplierDTO.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\AddRole.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\AuthorizationManagement.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\UpdateRole.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Customer\AddCustomer.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Customer\CustomerDetail.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Customer\CustomerList.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\AddContract.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\AddEmployee.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\EmployeeManagement.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\EmployeeProfile.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\UpdateContract.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Employee\UpdateEmployee.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\ConfirmStockIn.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\InvoicesHistory.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\POApproval.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\PODetails.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\POList.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\PurchaseOrder.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Importing\UpdatePO.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\AddMedicine.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\MedicineDetails.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\MedicinesBatch.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\MedicinesList.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Medicine\UpdateMedicine.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\AddPayroll.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\EmployeePayroll.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\PayrollDetails.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Payroll\PayrollManagement.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\AddPromo.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\AdjustPromo.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\HomePromo.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Promo\PromoDetail.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Requests\AddRequest.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Requests\EmployeeRequests.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Requests\UpdateRequest.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\HomeSales.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\HomeSales2.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\InvoicePanel.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\PaymentDialog.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Sales\SalesPanel.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\AddSupplier.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\SupplierDetail.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\SupplierList.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Supplier\UpdateSupplier.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\AddUser.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UpdateUser.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UpdateUserPassword.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UserInfo.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\User\UserManagement.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\WorkSchedule\WorkScheduleManagement.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\homepage.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\homepage1.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\model\Promotion.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\model\PurchaseOrderDetails.java
+C:\Users\BOI QUAN\OneDrive\Documents\PharmacyManagement_java\src\main\java\com\pharmacy\app\testconnect.java
