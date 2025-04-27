@@ -4,6 +4,10 @@
  */
 package com.pharmacy.app.GUI.User;
 
+import com.pharmacy.app.GUI.Sales.PaymentDialog;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author phong
@@ -37,6 +41,10 @@ public class UserManagement extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUser = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new java.awt.BorderLayout());
+
+        pnlUser1.setBackground(new java.awt.Color(255, 255, 255));
         pnlUser1.setToolTipText("");
         pnlUser1.setPreferredSize(new java.awt.Dimension(607, 40));
         pnlUser1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 5));
@@ -63,6 +71,7 @@ public class UserManagement extends javax.swing.JPanel {
         });
         pnlUser1.add(cbUser);
 
+        pnlUserButton.setBackground(new java.awt.Color(255, 255, 255));
         pnlUserButton.setPreferredSize(new java.awt.Dimension(310, 35));
         pnlUserButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 5));
 
@@ -104,6 +113,9 @@ public class UserManagement extends javax.swing.JPanel {
 
         pnlUser1.add(pnlUserButton);
 
+        add(pnlUser1, java.awt.BorderLayout.NORTH);
+
+        pnlUser2.setBackground(new java.awt.Color(255, 255, 255));
         pnlUser2.setPreferredSize(new java.awt.Dimension(600, 439));
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(695, 402));
@@ -131,30 +143,21 @@ public class UserManagement extends javax.swing.JPanel {
         tblUser.setShowGrid(true);
         jScrollPane1.setViewportView(tblUser);
 
-        pnlUser2.add(jScrollPane1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlUser2Layout = new javax.swing.GroupLayout(pnlUser2);
+        pnlUser2.setLayout(pnlUser2Layout);
+        pnlUser2Layout.setHorizontalGroup(
+            pnlUser2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE)
+        );
+        pnlUser2Layout.setVerticalGroup(
+            pnlUser2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlUser2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 723, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlUser2, javax.swing.GroupLayout.PREFERRED_SIZE, 711, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(pnlUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlUser2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-        );
+
+        add(pnlUser2, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbUserActionPerformed
@@ -166,7 +169,9 @@ public class UserManagement extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSearchUserActionPerformed
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
-        // TODO add your handling code here:
+        AddUser addDialog = new AddUser((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addDialog.setLocationRelativeTo(null);
+        addDialog.setVisible(true);
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnRefeshUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefeshUserActionPerformed

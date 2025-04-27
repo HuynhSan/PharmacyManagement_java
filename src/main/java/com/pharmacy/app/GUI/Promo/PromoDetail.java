@@ -4,11 +4,11 @@
  */
 package com.pharmacy.app.GUI.Promo;
 
+import com.pharmacy.app.DTO.Promotion;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import com.pharmacy.app.model.*;
 
 /**
  *

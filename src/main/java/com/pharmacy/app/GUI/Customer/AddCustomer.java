@@ -44,7 +44,9 @@ public class AddCustomer extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(326589, 326589));
         setMinimumSize(new java.awt.Dimension(400, 300));
+        setPreferredSize(new java.awt.Dimension(450, 300));
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
@@ -62,6 +64,8 @@ public class AddCustomer extends javax.swing.JDialog {
         lblTitle.setMinimumSize(new java.awt.Dimension(400, 50));
         lblTitle.setPreferredSize(new java.awt.Dimension(450, 50));
         plTitle.add(lblTitle);
+
+        getContentPane().add(plTitle);
 
         plInformation.setBackground(new java.awt.Color(255, 255, 255));
         plInformation.setMaximumSize(new java.awt.Dimension(326589, 326589));
@@ -155,9 +159,7 @@ public class AddCustomer extends javax.swing.JDialog {
 
         plInformation.add(plButton);
 
-        plTitle.add(plInformation);
-
-        getContentPane().add(plTitle);
+        getContentPane().add(plInformation);
 
         pack();
         setLocationRelativeTo(null);

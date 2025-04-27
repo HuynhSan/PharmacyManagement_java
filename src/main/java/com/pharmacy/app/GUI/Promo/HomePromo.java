@@ -3,13 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.pharmacy.app.GUI.Promo;
+import com.pharmacy.app.DTO.Promotion;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
-import com.pharmacy.app.model.*;
 
 /**
  *
@@ -35,15 +35,17 @@ public class HomePromo extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        cbxAll = new javax.swing.JComboBox<>();
-        txtSearch = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        lblPdf = new javax.swing.JLabel();
+        plHeader = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        plSearch = new javax.swing.JPanel();
+        cbSort = new javax.swing.JComboBox<>();
+        txtSearch1 = new javax.swing.JTextField();
+        plButton = new javax.swing.JPanel();
+        btnAdd = new javax.swing.JButton();
+        btnRefesh = new javax.swing.JButton();
+        lblImg = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblPromo = new javax.swing.JTable();
 
@@ -53,65 +55,91 @@ public class HomePromo extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 800));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setMaximumSize(new java.awt.Dimension(800, 50));
-        jPanel2.setMinimumSize(new java.awt.Dimension(800, 54));
-        jPanel2.setPreferredSize(new java.awt.Dimension(100, 100));
-        jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 20));
+        plHeader.setBackground(new java.awt.Color(255, 255, 255));
+        plHeader.setMaximumSize(new java.awt.Dimension(800, 100));
+        plHeader.setMinimumSize(new java.awt.Dimension(800, 100));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setMinimumSize(new java.awt.Dimension(400, 40));
-        jPanel4.setPreferredSize(new java.awt.Dimension(700, 70));
-        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 15));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("QUẢN LÝ MÃ KHUYẾN MÃI");
 
-        cbxAll.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cbxAll.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Active", "IsActive" }));
-        cbxAll.setPreferredSize(new java.awt.Dimension(80, 35));
-        jPanel4.add(cbxAll);
+        plSearch.setBackground(new java.awt.Color(255, 255, 255));
+        plSearch.setMaximumSize(new java.awt.Dimension(450, 70));
+        plSearch.setMinimumSize(new java.awt.Dimension(450, 70));
+        plSearch.setPreferredSize(new java.awt.Dimension(450, 70));
+        plSearch.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 20));
 
-        txtSearch.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        txtSearch.setText("Search");
-        txtSearch.setMinimumSize(new java.awt.Dimension(80, 30));
-        txtSearch.setPreferredSize(new java.awt.Dimension(500, 35));
-        jPanel4.add(txtSearch);
+        cbSort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbSort.setMinimumSize(new java.awt.Dimension(100, 30));
+        cbSort.setPreferredSize(new java.awt.Dimension(100, 30));
+        plSearch.add(cbSort);
 
-        jPanel2.add(jPanel4);
+        txtSearch1.setMaximumSize(new java.awt.Dimension(300, 30));
+        txtSearch1.setMinimumSize(new java.awt.Dimension(300, 30));
+        txtSearch1.setPreferredSize(new java.awt.Dimension(300, 30));
+        plSearch.add(txtSearch1);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setMinimumSize(new java.awt.Dimension(500, 50));
-        jPanel3.setPreferredSize(new java.awt.Dimension(500, 70));
-        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 10));
+        plButton.setBackground(new java.awt.Color(255, 255, 255));
+        plButton.setMaximumSize(new java.awt.Dimension(300, 70));
+        plButton.setMinimumSize(new java.awt.Dimension(300, 70));
+        plButton.setPreferredSize(new java.awt.Dimension(300, 70));
+        plButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 15));
 
-        jButton2.setBackground(new java.awt.Color(0, 204, 51));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Add");
-        jButton2.setPreferredSize(new java.awt.Dimension(100, 35));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton2);
+        btnAdd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAdd.setText("Thêm");
+        btnAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdd.setMaximumSize(new java.awt.Dimension(75, 30));
+        btnAdd.setMinimumSize(new java.awt.Dimension(75, 30));
+        btnAdd.setPreferredSize(new java.awt.Dimension(75, 30));
+        plButton.add(btnAdd);
 
-        jButton4.setBackground(new java.awt.Color(153, 153, 153));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Refresh");
-        jButton4.setPreferredSize(new java.awt.Dimension(100, 35));
-        jPanel3.add(jButton4);
+        btnRefesh.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnRefesh.setText("Làm mới");
+        btnRefesh.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRefesh.setMaximumSize(new java.awt.Dimension(90, 30));
+        btnRefesh.setMinimumSize(new java.awt.Dimension(90, 30));
+        btnRefesh.setPreferredSize(new java.awt.Dimension(90, 30));
+        plButton.add(btnRefesh);
 
-        lblPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
-        lblPdf.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel3.add(lblPdf);
+        lblImg.setBackground(new java.awt.Color(255, 255, 255));
+        lblImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
+        plButton.add(lblImg);
 
-        jPanel2.add(jPanel3);
+        javax.swing.GroupLayout plHeaderLayout = new javax.swing.GroupLayout(plHeader);
+        plHeader.setLayout(plHeaderLayout);
+        plHeaderLayout.setHorizontalGroup(
+            plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(plHeaderLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 423, Short.MAX_VALUE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        plHeaderLayout.setVerticalGroup(
+            plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(plHeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
-        add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        add(plHeader, java.awt.BorderLayout.NORTH);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(800, 550));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 650));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jSeparator1.setMaximumSize(new java.awt.Dimension(700, 10));
+        jSeparator1.setMinimumSize(new java.awt.Dimension(700, 10));
+        jSeparator1.setPreferredSize(new java.awt.Dimension(700, 10));
+        jPanel1.add(jSeparator1, java.awt.BorderLayout.NORTH);
 
         jScrollPane2.setMinimumSize(new java.awt.Dimension(760, 510));
         jScrollPane2.setPreferredSize(new java.awt.Dimension(1180, 620));
@@ -149,15 +177,10 @@ public class HomePromo extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblPromo);
 
-        jPanel1.add(jScrollPane2);
+        jPanel1.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        AddPromo dialog = new AddPromo((JFrame) SwingUtilities.getWindowAncestor(this), true);
-        dialog.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void tblPromoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPromoMouseClicked
         if (evt.getClickCount() == 2){
@@ -169,17 +192,19 @@ public class HomePromo extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cbxAll;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnRefesh;
+    private javax.swing.JComboBox<String> cbSort;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblPdf;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JPanel plButton;
+    private javax.swing.JPanel plHeader;
+    private javax.swing.JPanel plSearch;
     private javax.swing.JTable tblPromo;
-    private javax.swing.JTextField txtSearch;
+    private javax.swing.JTextField txtSearch1;
     // End of variables declaration//GEN-END:variables
 
     private void loadPromoData() {

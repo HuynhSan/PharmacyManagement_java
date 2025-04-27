@@ -18,12 +18,13 @@ import com.pharmacy.app.GUI.Sales.HomeSales;
 import com.pharmacy.app.GUI.Supplier.SupplierList;
 import com.pharmacy.app.GUI.User.UserInfo;
 import com.pharmacy.app.GUI.User.UserManagement;
+import com.pharmacy.app.GUI.WorkSchedule.WorkScheduleManagement;
 
 /**
  *
  * @author LENOVO
  */
-public class homepage extends javax.swing.JFrame {
+public class managerView extends javax.swing.JFrame {
 
     /**
      * Creates new form pagehome
@@ -34,7 +35,7 @@ public class homepage extends javax.swing.JFrame {
     private CardLayout cardlayout = new CardLayout();
     private HomeSales homesales = new HomeSales();
     
-    public homepage() {
+    public managerView() {
         initComponents();
         this.setLocationRelativeTo(null);
         ContentPn.add(homesales, "Sales");
@@ -61,15 +62,21 @@ public class homepage extends javax.swing.JFrame {
         btnBack = new javax.swing.JPanel();
         backicon = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        btnUser3 = new javax.swing.JPanel();
+        btnUser = new javax.swing.JPanel();
         usericon = new javax.swing.JLabel();
-        logoutBtn = new javax.swing.JPanel();
+        btnLogout = new javax.swing.JPanel();
         logouticon = new javax.swing.JLabel();
         MenuHidePn = new javax.swing.JPanel();
         saleBtn = new javax.swing.JButton();
-        productBtn = new javax.swing.JButton();
         cusBtn = new javax.swing.JButton();
         promoBtn = new javax.swing.JButton();
+        empBtn = new javax.swing.JButton();
+        supBtn = new javax.swing.JButton();
+        importBtn = new javax.swing.JButton();
+        purchaseBtn = new javax.swing.JButton();
+        productBtn = new javax.swing.JButton();
+        scheduleBtn = new javax.swing.JButton();
+        reportBtn = new javax.swing.JButton();
         infoBtn = new javax.swing.JButton();
         ContentPn = new javax.swing.JPanel();
 
@@ -90,6 +97,7 @@ public class homepage extends javax.swing.JFrame {
         btnClose.setMinimumSize(new java.awt.Dimension(45, 45));
         btnClose.setPreferredSize(new java.awt.Dimension(45, 45));
 
+        closeicon.setBackground(new java.awt.Color(0, 51, 102));
         closeicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/closeWindow.png"))); // NOI18N
         closeicon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -178,8 +186,9 @@ public class homepage extends javax.swing.JFrame {
         btnBack.setMaximumSize(new java.awt.Dimension(50, 50));
         btnBack.setMinimumSize(new java.awt.Dimension(50, 50));
 
-        backicon.setBackground(new java.awt.Color(204, 204, 204));
+        backicon.setBackground(new java.awt.Color(0, 51, 102));
         backicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu1.png"))); // NOI18N
+        backicon.setText("jLabel4");
         backicon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backiconMouseClicked(evt);
@@ -198,14 +207,14 @@ public class homepage extends javax.swing.JFrame {
             btnBackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnBackLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(backicon)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(backicon, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         btnBackLayout.setVerticalGroup(
             btnBackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnBackLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(backicon, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addComponent(backicon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -221,16 +230,16 @@ public class homepage extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 415, Short.MAX_VALUE)
+            .addGap(0, 421, Short.MAX_VALUE)
         );
 
         MenuIcon.add(jPanel1);
 
-        btnUser3.setBackground(new java.awt.Color(0, 51, 102));
-        btnUser3.setMaximumSize(new java.awt.Dimension(45, 45));
-        btnUser3.setPreferredSize(new java.awt.Dimension(45, 45));
+        btnUser.setBackground(new java.awt.Color(0, 51, 102));
+        btnUser.setMaximumSize(new java.awt.Dimension(45, 45));
+        btnUser.setPreferredSize(new java.awt.Dimension(45, 45));
 
-        usericon.setBackground(new java.awt.Color(0, 153, 153));
+        usericon.setBackground(new java.awt.Color(0, 51, 102));
         usericon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user1.png"))); // NOI18N
         usericon.setPreferredSize(new java.awt.Dimension(31, 35));
         usericon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -245,25 +254,26 @@ public class homepage extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout btnUser3Layout = new javax.swing.GroupLayout(btnUser3);
-        btnUser3.setLayout(btnUser3Layout);
-        btnUser3Layout.setHorizontalGroup(
-            btnUser3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout btnUserLayout = new javax.swing.GroupLayout(btnUser);
+        btnUser.setLayout(btnUserLayout);
+        btnUserLayout.setHorizontalGroup(
+            btnUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(usericon, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
         );
-        btnUser3Layout.setVerticalGroup(
-            btnUser3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnUser3Layout.createSequentialGroup()
+        btnUserLayout.setVerticalGroup(
+            btnUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnUserLayout.createSequentialGroup()
                 .addGap(0, 2, Short.MAX_VALUE)
                 .addComponent(usericon, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        MenuIcon.add(btnUser3);
+        MenuIcon.add(btnUser);
 
-        logoutBtn.setBackground(new java.awt.Color(0, 51, 102));
-        logoutBtn.setMaximumSize(new java.awt.Dimension(45, 45));
-        logoutBtn.setPreferredSize(new java.awt.Dimension(45, 45));
+        btnLogout.setBackground(new java.awt.Color(0, 51, 102));
+        btnLogout.setMaximumSize(new java.awt.Dimension(45, 45));
+        btnLogout.setPreferredSize(new java.awt.Dimension(45, 45));
 
+        logouticon.setBackground(new java.awt.Color(0, 51, 102));
         logouticon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         logouticon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -274,24 +284,24 @@ public class homepage extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout logoutBtnLayout = new javax.swing.GroupLayout(logoutBtn);
-        logoutBtn.setLayout(logoutBtnLayout);
-        logoutBtnLayout.setHorizontalGroup(
-            logoutBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoutBtnLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logouticon, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        javax.swing.GroupLayout btnLogoutLayout = new javax.swing.GroupLayout(btnLogout);
+        btnLogout.setLayout(btnLogoutLayout);
+        btnLogoutLayout.setHorizontalGroup(
+            btnLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnLogoutLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(logouticon)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        logoutBtnLayout.setVerticalGroup(
-            logoutBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoutBtnLayout.createSequentialGroup()
+        btnLogoutLayout.setVerticalGroup(
+            btnLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnLogoutLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(logouticon, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        MenuIcon.add(logoutBtn);
+        MenuIcon.add(btnLogout);
 
         MenuPn.add(MenuIcon, java.awt.BorderLayout.LINE_START);
 
@@ -300,7 +310,7 @@ public class homepage extends javax.swing.JFrame {
         MenuHidePn.setMinimumSize(new java.awt.Dimension(200, 555));
         MenuHidePn.setPreferredSize(new java.awt.Dimension(200, 555));
         MenuHidePn.setVerifyInputWhenFocusTarget(false);
-        MenuHidePn.setLayout(new java.awt.GridLayout(10, 1, 50, 10));
+        MenuHidePn.setLayout(new java.awt.GridLayout(11, 1, 50, 10));
 
         saleBtn.setBackground(new java.awt.Color(0, 102, 153));
         saleBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
@@ -336,36 +346,6 @@ public class homepage extends javax.swing.JFrame {
             }
         });
         MenuHidePn.add(saleBtn);
-
-        productBtn.setBackground(new java.awt.Color(0, 102, 153));
-        productBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        productBtn.setForeground(new java.awt.Color(255, 255, 255));
-        productBtn.setText("QUẢN LÝ SẢN PHẨM");
-        productBtn.setBorder(null);
-        productBtn.setBorderPainted(false);
-        productBtn.setContentAreaFilled(false);
-        productBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        productBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        productBtn.setMaximumSize(new java.awt.Dimension(200, 30));
-        productBtn.setMinimumSize(new java.awt.Dimension(200, 30));
-        productBtn.setPreferredSize(new java.awt.Dimension(150, 30));
-        productBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                productBtnMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                productBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                productBtnMouseExited(evt);
-            }
-        });
-        productBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productBtnActionPerformed(evt);
-            }
-        });
-        MenuHidePn.add(productBtn);
 
         cusBtn.setBackground(new java.awt.Color(0, 102, 153));
         cusBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
@@ -426,6 +406,209 @@ public class homepage extends javax.swing.JFrame {
             }
         });
         MenuHidePn.add(promoBtn);
+
+        empBtn.setBackground(new java.awt.Color(0, 102, 153));
+        empBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        empBtn.setForeground(new java.awt.Color(255, 255, 255));
+        empBtn.setText("QUẢN LÝ NHÂN VIÊN");
+        empBtn.setBorder(null);
+        empBtn.setBorderPainted(false);
+        empBtn.setContentAreaFilled(false);
+        empBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        empBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        empBtn.setMaximumSize(new java.awt.Dimension(200, 30));
+        empBtn.setMinimumSize(new java.awt.Dimension(200, 30));
+        empBtn.setPreferredSize(new java.awt.Dimension(150, 30));
+        empBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                empBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                empBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                empBtnMouseExited(evt);
+            }
+        });
+        empBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empBtnActionPerformed(evt);
+            }
+        });
+        MenuHidePn.add(empBtn);
+
+        supBtn.setBackground(new java.awt.Color(0, 102, 153));
+        supBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        supBtn.setForeground(new java.awt.Color(255, 255, 255));
+        supBtn.setText("QUẢN LÝ NHÀ CUNG CẤP");
+        supBtn.setBorder(null);
+        supBtn.setBorderPainted(false);
+        supBtn.setContentAreaFilled(false);
+        supBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        supBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        supBtn.setMaximumSize(new java.awt.Dimension(200, 30));
+        supBtn.setMinimumSize(new java.awt.Dimension(200, 30));
+        supBtn.setPreferredSize(new java.awt.Dimension(150, 30));
+        supBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                supBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                supBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                supBtnMouseExited(evt);
+            }
+        });
+        supBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                supBtnActionPerformed(evt);
+            }
+        });
+        MenuHidePn.add(supBtn);
+
+        importBtn.setBackground(new java.awt.Color(0, 102, 153));
+        importBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        importBtn.setForeground(new java.awt.Color(255, 255, 255));
+        importBtn.setText("NHẬP HÀNG");
+        importBtn.setToolTipText("");
+        importBtn.setBorder(null);
+        importBtn.setBorderPainted(false);
+        importBtn.setContentAreaFilled(false);
+        importBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        importBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        importBtn.setMaximumSize(new java.awt.Dimension(200, 30));
+        importBtn.setMinimumSize(new java.awt.Dimension(200, 30));
+        importBtn.setPreferredSize(new java.awt.Dimension(150, 30));
+        importBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                importBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                importBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                importBtnMouseExited(evt);
+            }
+        });
+        importBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                importBtnActionPerformed(evt);
+            }
+        });
+        MenuHidePn.add(importBtn);
+
+        purchaseBtn.setBackground(new java.awt.Color(0, 102, 153));
+        purchaseBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        purchaseBtn.setForeground(new java.awt.Color(255, 255, 255));
+        purchaseBtn.setText("ĐẶT HÀNG");
+        purchaseBtn.setBorder(null);
+        purchaseBtn.setBorderPainted(false);
+        purchaseBtn.setContentAreaFilled(false);
+        purchaseBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        purchaseBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        purchaseBtn.setMaximumSize(new java.awt.Dimension(200, 30));
+        purchaseBtn.setMinimumSize(new java.awt.Dimension(200, 30));
+        purchaseBtn.setPreferredSize(new java.awt.Dimension(150, 30));
+        purchaseBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                purchaseBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                purchaseBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                purchaseBtnMouseExited(evt);
+            }
+        });
+        purchaseBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                purchaseBtnActionPerformed(evt);
+            }
+        });
+        MenuHidePn.add(purchaseBtn);
+
+        productBtn.setBackground(new java.awt.Color(0, 102, 153));
+        productBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        productBtn.setForeground(new java.awt.Color(255, 255, 255));
+        productBtn.setText("QUẢN LÝ SẢN PHẨM");
+        productBtn.setBorder(null);
+        productBtn.setBorderPainted(false);
+        productBtn.setContentAreaFilled(false);
+        productBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        productBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        productBtn.setMaximumSize(new java.awt.Dimension(200, 30));
+        productBtn.setMinimumSize(new java.awt.Dimension(200, 30));
+        productBtn.setPreferredSize(new java.awt.Dimension(150, 30));
+        productBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                productBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                productBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                productBtnMouseExited(evt);
+            }
+        });
+        productBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productBtnActionPerformed(evt);
+            }
+        });
+        MenuHidePn.add(productBtn);
+
+        scheduleBtn.setBackground(new java.awt.Color(0, 102, 153));
+        scheduleBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        scheduleBtn.setForeground(new java.awt.Color(255, 255, 255));
+        scheduleBtn.setText("QUẢN LÝ LỊCH LÀM VIỆC");
+        scheduleBtn.setBorder(null);
+        scheduleBtn.setBorderPainted(false);
+        scheduleBtn.setContentAreaFilled(false);
+        scheduleBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        scheduleBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        scheduleBtn.setMaximumSize(new java.awt.Dimension(200, 30));
+        scheduleBtn.setMinimumSize(new java.awt.Dimension(200, 30));
+        scheduleBtn.setPreferredSize(new java.awt.Dimension(150, 30));
+        scheduleBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                scheduleBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                scheduleBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                scheduleBtnMouseExited(evt);
+            }
+        });
+        scheduleBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                scheduleBtnActionPerformed(evt);
+            }
+        });
+        MenuHidePn.add(scheduleBtn);
+
+        reportBtn.setBackground(new java.awt.Color(0, 102, 153));
+        reportBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        reportBtn.setForeground(new java.awt.Color(255, 255, 255));
+        reportBtn.setText("BÁO CÁO THỐNG KÊ");
+        reportBtn.setBorder(null);
+        reportBtn.setBorderPainted(false);
+        reportBtn.setContentAreaFilled(false);
+        reportBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reportBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        reportBtn.setMaximumSize(new java.awt.Dimension(200, 30));
+        reportBtn.setMinimumSize(new java.awt.Dimension(200, 30));
+        reportBtn.setPreferredSize(new java.awt.Dimension(150, 30));
+        reportBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                reportBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                reportBtnMouseExited(evt);
+            }
+        });
+        MenuHidePn.add(reportBtn);
 
         infoBtn.setBackground(new java.awt.Color(0, 102, 153));
         infoBtn.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
@@ -524,11 +707,11 @@ public class homepage extends javax.swing.JFrame {
 
     private void minmaxiconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minmaxiconMouseClicked
         btnMax.setBackground(new Color(81, 115, 150));
-        if (this.getExtendedState() != homepage.MAXIMIZED_BOTH){
-            this.setExtendedState(homepage.MAXIMIZED_BOTH);
+        if (this.getExtendedState() != managerView.MAXIMIZED_BOTH){
+            this.setExtendedState(managerView.MAXIMIZED_BOTH);
             }
         else {
-            this.setExtendedState(homepage.NORMAL);
+            this.setExtendedState(managerView.NORMAL);
         }
     }//GEN-LAST:event_minmaxiconMouseClicked
 
@@ -543,6 +726,34 @@ public class homepage extends javax.swing.JFrame {
     private void saleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saleBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_saleBtnActionPerformed
+
+    private void cusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cusBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cusBtnActionPerformed
+
+    private void promoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_promoBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_promoBtnActionPerformed
+
+    private void empBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empBtnActionPerformed
+
+    private void supBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_supBtnActionPerformed
+
+    private void importBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_importBtnActionPerformed
+
+    private void purchaseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purchaseBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_purchaseBtnActionPerformed
+
+    private void productBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productBtnActionPerformed
 // Bán hàng
     private void saleBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saleBtnMouseEntered
         saleBtn.setBackground(colorEntered);
@@ -558,77 +769,125 @@ public class homepage extends javax.swing.JFrame {
         saleBtn.setBackground(colorExited);
         saleBtn.setOpaque(true);
     }//GEN-LAST:event_saleBtnMouseExited
-
-    private void saleBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saleBtnMouseClicked
-        ContentPn.add(homesales, "Sales");
-        switchToPanel("Sales");
-    }//GEN-LAST:event_saleBtnMouseClicked
-
-    private void cusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cusBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cusBtnActionPerformed
-
-    private void cusBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cusBtnMouseExited
-        cusBtn.setBackground(colorExited);
-        cusBtn.setOpaque(true);
-    }//GEN-LAST:event_cusBtnMouseExited
-
 // Khách hàng
     private void cusBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cusBtnMouseEntered
         cusBtn.setBackground(colorEntered);
         cusBtn.setOpaque(true);
     }//GEN-LAST:event_cusBtnMouseEntered
 
+    private void cusBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cusBtnMouseExited
+        cusBtn.setBackground(colorExited);
+        cusBtn.setOpaque(true);
+    }//GEN-LAST:event_cusBtnMouseExited
+
     private void cusBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cusBtnMouseClicked
         ContentPn.add(new CustomerList(), "Customer");
         switchToPanel("Customer");
     }//GEN-LAST:event_cusBtnMouseClicked
-
-    private void promoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_promoBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_promoBtnActionPerformed
-
-    private void promoBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_promoBtnMouseExited
-        promoBtn.setBackground(colorExited);
-        promoBtn.setOpaque(true);
-    }//GEN-LAST:event_promoBtnMouseExited
-
 // Khuyến mãi
     private void promoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_promoBtnMouseEntered
         promoBtn.setBackground(colorEntered);
         promoBtn.setOpaque(true);
     }//GEN-LAST:event_promoBtnMouseEntered
 
+    private void promoBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_promoBtnMouseExited
+        promoBtn.setBackground(colorExited);
+        promoBtn.setOpaque(true);
+    }//GEN-LAST:event_promoBtnMouseExited
+
     private void promoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_promoBtnMouseClicked
         ContentPn.add(new HomePromo(), "Promo");
         switchToPanel("Promo");
     }//GEN-LAST:event_promoBtnMouseClicked
+// Nhân viên
+    private void empBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_empBtnMouseEntered
+        empBtn.setBackground(colorEntered);
+        empBtn.setOpaque(true);
+    }//GEN-LAST:event_empBtnMouseEntered
 
-    private void productBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productBtnActionPerformed
+    private void empBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_empBtnMouseExited
+        empBtn.setBackground(colorExited);
+        empBtn.setOpaque(true);
+    }//GEN-LAST:event_empBtnMouseExited
 
-    private void productBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productBtnMouseExited
-        productBtn.setBackground(colorExited);
-        productBtn.setOpaque(true);
-    }//GEN-LAST:event_productBtnMouseExited
+    private void empBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_empBtnMouseClicked
+        ContentPn.add(new EmployeeManagement(), "Employee");
+        switchToPanel("Employee");
+    }//GEN-LAST:event_empBtnMouseClicked
+// Nhà cung cấp
+    private void supBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_supBtnMouseEntered
+        supBtn.setBackground(colorEntered);
+        supBtn.setOpaque(true);
+    }//GEN-LAST:event_supBtnMouseEntered
 
+    private void supBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_supBtnMouseExited
+        supBtn.setBackground(colorExited);
+        supBtn.setOpaque(true);
+    }//GEN-LAST:event_supBtnMouseExited
+
+    private void supBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_supBtnMouseClicked
+        ContentPn.add(new SupplierList(), "Supplier");
+        switchToPanel("Supplier");
+    }//GEN-LAST:event_supBtnMouseClicked
+// Nhập hàng
+    private void importBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importBtnMouseEntered
+        importBtn.setBackground(colorEntered);
+        importBtn.setOpaque(true);
+    }//GEN-LAST:event_importBtnMouseEntered
+
+    private void importBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importBtnMouseExited
+        importBtn.setBackground(colorExited);
+        importBtn.setOpaque(true);
+    }//GEN-LAST:event_importBtnMouseExited
+
+    private void importBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importBtnMouseClicked
+        ContentPn.add(new Invoices(), "Invoices");
+        switchToPanel("Invoices");
+    }//GEN-LAST:event_importBtnMouseClicked
+// Đặt hàng
+    private void purchaseBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purchaseBtnMouseEntered
+        purchaseBtn.setBackground(colorEntered);
+        purchaseBtn.setOpaque(true);
+    }//GEN-LAST:event_purchaseBtnMouseEntered
+
+    private void purchaseBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purchaseBtnMouseExited
+        purchaseBtn.setBackground(colorExited);
+        purchaseBtn.setOpaque(true);
+    }//GEN-LAST:event_purchaseBtnMouseExited
+
+    private void purchaseBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purchaseBtnMouseClicked
+        ContentPn.add(new PurchaseOrder(), "PO");
+        switchToPanel("PO");
+    }//GEN-LAST:event_purchaseBtnMouseClicked
 // Sản phẩm
     private void productBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productBtnMouseEntered
         productBtn.setBackground(colorEntered);
         productBtn.setOpaque(true);
     }//GEN-LAST:event_productBtnMouseEntered
 
+    private void productBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productBtnMouseExited
+        productBtn.setBackground(colorExited);
+        productBtn.setOpaque(true);
+    }//GEN-LAST:event_productBtnMouseExited
+
     private void productBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productBtnMouseClicked
         ContentPn.add(new MedicalProducts(), "Medinces");
         switchToPanel("Medinces");
     }//GEN-LAST:event_productBtnMouseClicked
 
-    private void usericonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseClicked
-        UserInfo userDialog = new UserInfo((Frame)SwingUtilities.getWindowAncestor(usericon), true);
-        userDialog.setLocationRelativeTo(null);
-        userDialog.setVisible(true);
-    }//GEN-LAST:event_usericonMouseClicked
+    private void saleBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saleBtnMouseClicked
+        ContentPn.add(homesales, "Sales");
+        switchToPanel("Sales");
+    }//GEN-LAST:event_saleBtnMouseClicked
+
+    private void scheduleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scheduleBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_scheduleBtnActionPerformed
+
+    private void scheduleBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scheduleBtnMouseClicked
+        ContentPn.add(new WorkScheduleManagement(), "Schedule");
+        switchToPanel("Schedule");
+    }//GEN-LAST:event_scheduleBtnMouseClicked
 
     private void infoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_infoBtnMouseClicked
         ContentPn.add(new EmployeeProfile(), "Profile");
@@ -645,20 +904,46 @@ public class homepage extends javax.swing.JFrame {
         infoBtn.setOpaque(true);
     }//GEN-LAST:event_infoBtnMouseExited
 
+    private void scheduleBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scheduleBtnMouseEntered
+        scheduleBtn.setBackground(colorEntered);
+        scheduleBtn.setOpaque(true);// TODO add your handling code here:
+    }//GEN-LAST:event_scheduleBtnMouseEntered
+
+    private void scheduleBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scheduleBtnMouseExited
+        scheduleBtn.setBackground(colorExited);
+        scheduleBtn.setOpaque(true);
+    }//GEN-LAST:event_scheduleBtnMouseExited
+
+    private void reportBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportBtnMouseEntered
+        reportBtn.setBackground(colorEntered);
+        reportBtn.setOpaque(true);
+    }//GEN-LAST:event_reportBtnMouseEntered
+
+    private void reportBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportBtnMouseExited
+        reportBtn.setBackground(colorExited);
+        reportBtn.setOpaque(true);
+    }//GEN-LAST:event_reportBtnMouseExited
+
     private void usericonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseEntered
-        usericon.setBackground(new Color(81, 115, 150));
+        btnUser.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_usericonMouseEntered
 
     private void usericonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseExited
-        usericon.setBackground(new Color(0,51,102));
+        btnUser.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_usericonMouseExited
 
+    private void usericonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usericonMouseClicked
+        UserInfo userDialog = new UserInfo((Frame)SwingUtilities.getWindowAncestor(usericon), true);
+        userDialog.setLocationRelativeTo(null);
+        userDialog.setVisible(true);
+    }//GEN-LAST:event_usericonMouseClicked
+
     private void logouticonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logouticonMouseEntered
-        logouticon.setBackground(new Color(81, 115, 150));
+        btnLogout.setBackground(new Color(81, 115, 150));
     }//GEN-LAST:event_logouticonMouseEntered
 
     private void logouticonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logouticonMouseExited
-        logouticon.setBackground(new Color(0,51,102));
+        btnLogout.setBackground(new Color(0,51,102));
     }//GEN-LAST:event_logouticonMouseExited
 
     
@@ -676,19 +961,21 @@ public class homepage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(managerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(managerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(managerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(managerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-         SwingUtilities.invokeLater(() -> new homepage().setVisible(true));
+         SwingUtilities.invokeLater(() -> new managerView().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -700,19 +987,25 @@ public class homepage extends javax.swing.JFrame {
     private javax.swing.JLabel backicon;
     private javax.swing.JPanel btnBack;
     private javax.swing.JPanel btnClose;
+    private javax.swing.JPanel btnLogout;
     private javax.swing.JPanel btnMax;
-    private javax.swing.JPanel btnUser3;
+    private javax.swing.JPanel btnUser;
     private javax.swing.JLabel closeicon;
     private javax.swing.JButton cusBtn;
+    private javax.swing.JButton empBtn;
     private javax.swing.JPanel iconExit;
+    private javax.swing.JButton importBtn;
     private javax.swing.JButton infoBtn;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel logoutBtn;
     private javax.swing.JLabel logouticon;
     private javax.swing.JLabel minmaxicon;
     private javax.swing.JButton productBtn;
     private javax.swing.JButton promoBtn;
+    private javax.swing.JButton purchaseBtn;
+    private javax.swing.JButton reportBtn;
     private javax.swing.JButton saleBtn;
+    private javax.swing.JButton scheduleBtn;
+    private javax.swing.JButton supBtn;
     private javax.swing.JLabel usericon;
     // End of variables declaration//GEN-END:variables
 }

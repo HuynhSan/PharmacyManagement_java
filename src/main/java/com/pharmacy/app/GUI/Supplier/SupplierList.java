@@ -4,10 +4,8 @@
  */
 package com.pharmacy.app.GUI.Supplier;
 
-import com.pharmacy.app.BUS.SupplierBUS;
-import com.pharmacy.app.DTO.SupplierDTO;
-import java.util.List;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -20,23 +18,6 @@ public class SupplierList extends javax.swing.JPanel {
      */
     public SupplierList() {
         initComponents();
-        loadSupplierList();
-    }
-    
-    private void loadSupplierList(){
-        SupplierBUS supplierBUS = new SupplierBUS();
-        List<SupplierDTO> suppliersList = supplierBUS.getAllSuppliers();
-        DefaultTableModel model = (DefaultTableModel) tbSupplierList.getModel();
-        model.setRowCount(0);
-        
-        for (SupplierDTO s: suppliersList){
-            model.addRow(new Object[]{
-                s.getId(),
-                s.getName(),
-                s.getPhone(),
-                s.getAddress()
-            });
-        }
     }
 
     /**
@@ -49,10 +30,10 @@ public class SupplierList extends javax.swing.JPanel {
     private void initComponents() {
 
         plHeader = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         plSearch = new javax.swing.JPanel();
         cbSort = new javax.swing.JComboBox<>();
         txtSearch = new javax.swing.JTextField();
-        plButton = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnRefesh = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
@@ -65,13 +46,16 @@ public class SupplierList extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(800, 580));
         setMinimumSize(new java.awt.Dimension(800, 580));
         setPreferredSize(new java.awt.Dimension(800, 580));
-        setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.Y_AXIS));
+        setLayout(new java.awt.BorderLayout());
 
         plHeader.setBackground(new java.awt.Color(255, 255, 255));
         plHeader.setMaximumSize(new java.awt.Dimension(800, 100));
         plHeader.setMinimumSize(new java.awt.Dimension(800, 100));
         plHeader.setPreferredSize(new java.awt.Dimension(800, 100));
-        plHeader.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 20));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("QUẢN LÝ NHÀ CUNG CẤP");
 
         plSearch.setBackground(new java.awt.Color(255, 255, 255));
         plSearch.setMaximumSize(new java.awt.Dimension(450, 70));
@@ -89,21 +73,18 @@ public class SupplierList extends javax.swing.JPanel {
         txtSearch.setPreferredSize(new java.awt.Dimension(300, 30));
         plSearch.add(txtSearch);
 
-        plHeader.add(plSearch);
-
-        plButton.setBackground(new java.awt.Color(255, 255, 255));
-        plButton.setMaximumSize(new java.awt.Dimension(300, 70));
-        plButton.setMinimumSize(new java.awt.Dimension(300, 70));
-        plButton.setPreferredSize(new java.awt.Dimension(300, 70));
-        plButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 15));
-
         btnAdd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnAdd.setText("Thêm");
         btnAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnAdd.setMaximumSize(new java.awt.Dimension(75, 30));
         btnAdd.setMinimumSize(new java.awt.Dimension(75, 30));
         btnAdd.setPreferredSize(new java.awt.Dimension(75, 30));
-        plButton.add(btnAdd);
+        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddMouseClicked(evt);
+            }
+        });
+        plSearch.add(btnAdd);
 
         btnRefesh.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRefesh.setText("Làm mới");
@@ -111,27 +92,42 @@ public class SupplierList extends javax.swing.JPanel {
         btnRefesh.setMaximumSize(new java.awt.Dimension(90, 30));
         btnRefesh.setMinimumSize(new java.awt.Dimension(90, 30));
         btnRefesh.setPreferredSize(new java.awt.Dimension(90, 30));
-        plButton.add(btnRefesh);
+        plSearch.add(btnRefesh);
 
         lblImg.setBackground(new java.awt.Color(255, 255, 255));
         lblImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pdf.png"))); // NOI18N
-        plButton.add(lblImg);
+        plSearch.add(lblImg);
 
-        plHeader.add(plButton);
+        javax.swing.GroupLayout plHeaderLayout = new javax.swing.GroupLayout(plHeader);
+        plHeader.setLayout(plHeaderLayout);
+        plHeaderLayout.setHorizontalGroup(
+            plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(plSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
+        );
+        plHeaderLayout.setVerticalGroup(
+            plHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(plHeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(plSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+        );
 
-        add(plHeader);
+        add(plHeader, java.awt.BorderLayout.NORTH);
 
         plSupplierList.setBackground(new java.awt.Color(255, 255, 255));
         plSupplierList.setMaximumSize(new java.awt.Dimension(800, 450));
         plSupplierList.setMinimumSize(new java.awt.Dimension(800, 450));
         plSupplierList.setPreferredSize(new java.awt.Dimension(800, 450));
-        plSupplierList.setLayout(new javax.swing.BoxLayout(plSupplierList, javax.swing.BoxLayout.Y_AXIS));
+        plSupplierList.setLayout(new java.awt.BorderLayout());
 
         jSeparator1.setMaximumSize(new java.awt.Dimension(700, 10));
         jSeparator1.setMinimumSize(new java.awt.Dimension(700, 10));
         jSeparator1.setPreferredSize(new java.awt.Dimension(700, 10));
-        plSupplierList.add(jSeparator1);
+        plSupplierList.add(jSeparator1, java.awt.BorderLayout.NORTH);
 
         jScrollPane1.setMaximumSize(new java.awt.Dimension(780, 400));
         jScrollPane1.setMinimumSize(new java.awt.Dimension(780, 400));
@@ -166,20 +162,26 @@ public class SupplierList extends javax.swing.JPanel {
         tbSupplierList.setShowGrid(true);
         jScrollPane1.setViewportView(tbSupplierList);
 
-        plSupplierList.add(jScrollPane1);
+        plSupplierList.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        add(plSupplierList);
+        add(plSupplierList, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
+        AddSupplier addDialog = new AddSupplier((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addDialog.setLocationRelativeTo(null);
+        addDialog.setVisible(true);
+    }//GEN-LAST:event_btnAddMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnRefesh;
     private javax.swing.JComboBox<String> cbSort;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblImg;
-    private javax.swing.JPanel plButton;
     private javax.swing.JPanel plHeader;
     private javax.swing.JPanel plSearch;
     private javax.swing.JPanel plSupplierList;

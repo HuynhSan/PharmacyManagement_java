@@ -48,6 +48,14 @@ public class AuthorizationManagement extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblPermission = new javax.swing.JTable();
 
+        setLayout(new java.awt.BorderLayout());
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlRole.setBackground(new java.awt.Color(255, 255, 255));
+        pnlRole.setLayout(new java.awt.BorderLayout());
+
+        pnlRoleList.setBackground(new java.awt.Color(255, 255, 255));
         pnlRoleList.setPreferredSize(new java.awt.Dimension(600, 439));
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(580, 402));
@@ -75,11 +83,24 @@ public class AuthorizationManagement extends javax.swing.JPanel {
         tbRole.setShowGrid(true);
         jScrollPane1.setViewportView(tbRole);
 
-        pnlRoleList.add(jScrollPane1);
+        javax.swing.GroupLayout pnlRoleListLayout = new javax.swing.GroupLayout(pnlRoleList);
+        pnlRoleList.setLayout(pnlRoleListLayout);
+        pnlRoleListLayout.setHorizontalGroup(
+            pnlRoleListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
+        );
+        pnlRoleListLayout.setVerticalGroup(
+            pnlRoleListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlRoleListLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
+        );
 
+        pnlRole.add(pnlRoleList, java.awt.BorderLayout.CENTER);
+
+        pnlAuthorization.setBackground(new java.awt.Color(255, 255, 255));
         pnlAuthorization.setToolTipText("");
         pnlAuthorization.setPreferredSize(new java.awt.Dimension(607, 40));
-        pnlAuthorization.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 5));
 
         txtSearchRole.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtSearchRole.setForeground(new java.awt.Color(153, 153, 153));
@@ -89,6 +110,7 @@ public class AuthorizationManagement extends javax.swing.JPanel {
         txtSearchRole.setPreferredSize(new java.awt.Dimension(260, 22));
         pnlAuthorization.add(txtSearchRole);
 
+        pnlButton.setBackground(new java.awt.Color(255, 255, 255));
         pnlButton.setPreferredSize(new java.awt.Dimension(320, 35));
         pnlButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 5));
 
@@ -115,34 +137,16 @@ public class AuthorizationManagement extends javax.swing.JPanel {
 
         pnlAuthorization.add(pnlButton);
 
-        javax.swing.GroupLayout pnlRoleLayout = new javax.swing.GroupLayout(pnlRole);
-        pnlRole.setLayout(pnlRoleLayout);
-        pnlRoleLayout.setHorizontalGroup(
-            pnlRoleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlRoleLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlAuthorization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(pnlRoleLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnlRoleList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlRoleLayout.setVerticalGroup(
-            pnlRoleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlRoleLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(pnlAuthorization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlRoleList, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        pnlRole.add(pnlAuthorization, java.awt.BorderLayout.PAGE_START);
 
         jTabbedPane1.addTab("Nhóm quyền", pnlRole);
 
+        pnlPermission.setBackground(new java.awt.Color(255, 255, 255));
+        pnlPermission.setLayout(new java.awt.BorderLayout());
+
+        pnlPermission1.setBackground(new java.awt.Color(255, 255, 255));
         pnlPermission1.setToolTipText("");
         pnlPermission1.setPreferredSize(new java.awt.Dimension(607, 40));
-        pnlPermission1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 5));
 
         txtSearchPermission.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtSearchPermission.setForeground(new java.awt.Color(153, 153, 153));
@@ -150,8 +154,8 @@ public class AuthorizationManagement extends javax.swing.JPanel {
         txtSearchPermission.setHighlighter(null);
         txtSearchPermission.setMinimumSize(new java.awt.Dimension(260, 22));
         txtSearchPermission.setPreferredSize(new java.awt.Dimension(260, 22));
-        pnlPermission1.add(txtSearchPermission);
 
+        pnlButton1.setBackground(new java.awt.Color(255, 255, 255));
         pnlButton1.setPreferredSize(new java.awt.Dimension(320, 35));
         pnlButton1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 5));
 
@@ -176,8 +180,31 @@ public class AuthorizationManagement extends javax.swing.JPanel {
         btnPdf1.setPreferredSize(new java.awt.Dimension(72, 22));
         pnlButton1.add(btnPdf1);
 
-        pnlPermission1.add(pnlButton1);
+        javax.swing.GroupLayout pnlPermission1Layout = new javax.swing.GroupLayout(pnlPermission1);
+        pnlPermission1.setLayout(pnlPermission1Layout);
+        pnlPermission1Layout.setHorizontalGroup(
+            pnlPermission1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPermission1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(txtSearchPermission, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(pnlButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        pnlPermission1Layout.setVerticalGroup(
+            pnlPermission1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPermission1Layout.createSequentialGroup()
+                .addGroup(pnlPermission1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlPermission1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtSearchPermission, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(5, 5, 5))
+        );
 
+        pnlPermission.add(pnlPermission1, java.awt.BorderLayout.NORTH);
+
+        pnlPermissionList.setBackground(new java.awt.Color(255, 255, 255));
         pnlPermissionList.setPreferredSize(new java.awt.Dimension(600, 439));
 
         jScrollPane2.setPreferredSize(new java.awt.Dimension(580, 402));
@@ -205,43 +232,22 @@ public class AuthorizationManagement extends javax.swing.JPanel {
         tblPermission.setShowGrid(true);
         jScrollPane2.setViewportView(tblPermission);
 
-        pnlPermissionList.add(jScrollPane2);
+        javax.swing.GroupLayout pnlPermissionListLayout = new javax.swing.GroupLayout(pnlPermissionList);
+        pnlPermissionList.setLayout(pnlPermissionListLayout);
+        pnlPermissionListLayout.setHorizontalGroup(
+            pnlPermissionListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
+        );
+        pnlPermissionListLayout.setVerticalGroup(
+            pnlPermissionListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
+        );
 
-        javax.swing.GroupLayout pnlPermissionLayout = new javax.swing.GroupLayout(pnlPermission);
-        pnlPermission.setLayout(pnlPermissionLayout);
-        pnlPermissionLayout.setHorizontalGroup(
-            pnlPermissionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPermissionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlPermission1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(pnlPermissionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnlPermissionList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlPermissionLayout.setVerticalGroup(
-            pnlPermissionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPermissionLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(pnlPermission1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlPermissionList, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        pnlPermission.add(pnlPermissionList, java.awt.BorderLayout.CENTER);
 
         jTabbedPane1.addTab("Quyền", pnlPermission);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-        );
+        add(jTabbedPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
 

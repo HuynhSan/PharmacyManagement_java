@@ -4,6 +4,10 @@
  */
 package com.pharmacy.app.GUI.Payroll;
 
+import com.pharmacy.app.GUI.Supplier.AddSupplier;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author phong
@@ -48,6 +52,13 @@ public class PayrollManagement extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblComponent = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        tpPayroll.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlPayroll.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlPayroll1.setBackground(new java.awt.Color(255, 255, 255));
         pnlPayroll1.setToolTipText("");
         pnlPayroll1.setPreferredSize(new java.awt.Dimension(607, 40));
         pnlPayroll1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 5));
@@ -71,6 +82,7 @@ public class PayrollManagement extends javax.swing.JPanel {
         cbFilter.setPreferredSize(new java.awt.Dimension(105, 22));
         pnlPayroll1.add(cbFilter);
 
+        pnlPayrollButton.setBackground(new java.awt.Color(255, 255, 255));
         pnlPayrollButton.setPreferredSize(new java.awt.Dimension(300, 35));
         pnlPayrollButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 5));
 
@@ -90,6 +102,7 @@ public class PayrollManagement extends javax.swing.JPanel {
 
         pnlPayroll1.add(pnlPayrollButton);
 
+        pnlPayroll2.setBackground(new java.awt.Color(255, 255, 255));
         pnlPayroll2.setPreferredSize(new java.awt.Dimension(600, 439));
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(670, 402));
@@ -148,6 +161,9 @@ public class PayrollManagement extends javax.swing.JPanel {
 
         tpPayroll.addTab("Bảng lương", pnlPayroll);
 
+        pnlPayrollComponent.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlComponent1.setBackground(new java.awt.Color(255, 255, 255));
         pnlComponent1.setToolTipText("");
         pnlComponent1.setPreferredSize(new java.awt.Dimension(607, 40));
         pnlComponent1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 5));
@@ -165,6 +181,7 @@ public class PayrollManagement extends javax.swing.JPanel {
         });
         pnlComponent1.add(txtSearchComponent);
 
+        pnlComponentButton.setBackground(new java.awt.Color(255, 255, 255));
         pnlComponentButton.setPreferredSize(new java.awt.Dimension(310, 35));
         pnlComponentButton.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 10, 5));
 
@@ -173,6 +190,11 @@ public class PayrollManagement extends javax.swing.JPanel {
         btnAddComponent.setMaximumSize(new java.awt.Dimension(72, 22));
         btnAddComponent.setMinimumSize(new java.awt.Dimension(72, 22));
         btnAddComponent.setPreferredSize(new java.awt.Dimension(90, 22));
+        btnAddComponent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddComponentActionPerformed(evt);
+            }
+        });
         pnlComponentButton.add(btnAddComponent);
 
         btnRefesh1.setText("Tải lại");
@@ -191,6 +213,7 @@ public class PayrollManagement extends javax.swing.JPanel {
 
         pnlComponent1.add(pnlComponentButton);
 
+        pnlComponent2.setBackground(new java.awt.Color(255, 255, 255));
         pnlComponent2.setPreferredSize(new java.awt.Dimension(600, 439));
 
         jScrollPane2.setPreferredSize(new java.awt.Dimension(670, 402));
@@ -262,6 +285,12 @@ public class PayrollManagement extends javax.swing.JPanel {
     private void txtSearchComponentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchComponentActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSearchComponentActionPerformed
+
+    private void btnAddComponentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddComponentActionPerformed
+        AddPayroll addDialog = new AddPayroll((JFrame) SwingUtilities.getWindowAncestor(this), true);
+        addDialog.setLocationRelativeTo(null);
+        addDialog.setVisible(true);
+    }//GEN-LAST:event_btnAddComponentActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
