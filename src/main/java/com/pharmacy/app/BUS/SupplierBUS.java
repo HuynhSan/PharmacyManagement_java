@@ -6,7 +6,6 @@ package com.pharmacy.app.BUS;
 
 import com.pharmacy.app.DTO.SupplierDTO;
 import com.pharmacy.app.DAO.SupplierDAO;
-import com.pharmacy.app.dao.SupplierDAO;
 
 import java.sql.SQLException;
 import java.util.List;

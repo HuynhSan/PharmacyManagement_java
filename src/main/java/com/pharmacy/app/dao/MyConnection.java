@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.pharmacy.app.DAO;
-package com.pharmacy.app.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
