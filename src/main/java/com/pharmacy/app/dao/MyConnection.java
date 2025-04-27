@@ -3,11 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.pharmacy.app.DAO;
+package com.pharmacy.app.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -25,11 +27,7 @@ public class MyConnection {
 
             String url = "jdbc:sqlserver://localhost:1433;databaseName=pharmacy;trustServerCertificate=true";
             String user = "sa";
-<<<<<<< Updated upstream
             String password = "12345@12345";
-=======
-            String password = "";
->>>>>>> Stashed changes
             con = DriverManager.getConnection(url, user, password);
 
             stm = con.createStatement();
@@ -77,5 +75,3 @@ public class MyConnection {
     }
     
 }
-
-

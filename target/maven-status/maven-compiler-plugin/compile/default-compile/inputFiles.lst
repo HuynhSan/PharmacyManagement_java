@@ -1,14 +1,8 @@
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\App.java
-<<<<<<< Updated upstream
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\dao\categoryDAO.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\dao\MyConnection.java
-=======
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\BUS\SupplierBUS.java
-D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\DAO\categoryDAO.java
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\DAO\MyConnection.java
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\DAO\SupplierDAO.java
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\DTO\SupplierDTO.java
->>>>>>> Stashed changes
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\AddRole.java
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\AuthorizationManagement.java
 D:\PharmacyManagement_java\src\main\java\com\pharmacy\app\GUI\Authorization\UpdateRole.java

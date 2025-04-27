@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.pharmacy.app.DAO;
+package com.pharmacy.app.dao;
 import com.pharmacy.app.DTO.SupplierDTO;
 
 import java.sql.ResultSet;
@@ -18,6 +18,7 @@ public class SupplierDAO {
     public List<SupplierDTO> getAllSuppliers() throws SQLException {
         List<SupplierDTO> suppliers = new ArrayList<>();
         MyConnection myconnect = new MyConnection();
+
 
         if (myconnect.openConnection()) {
             String sql = "SELECT * FROM suppliers";
@@ -43,4 +44,3 @@ public class SupplierDAO {
         return suppliers;
     }
 }
-

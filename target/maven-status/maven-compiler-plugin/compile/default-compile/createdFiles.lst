@@ -196,7 +196,6 @@ com\pharmacy\app\GUI\Requests\EmployeeRequests.class
 com\pharmacy\app\GUI\Importing\ConfirmStockIn$3.class
 com\pharmacy\app\GUI\User\UpdateUser.class
 com\pharmacy\app\homepage1$13.class
-com\pharmacy\app\dao\categoryDAO.class
 com\pharmacy\app\GUI\Employee\EmployeeManagement$6.class
 com\pharmacy\app\GUI\Requests\UpdateRequest.class
 com\pharmacy\app\GUI\Medicine\MedicineDetails.class
@@ -281,6 +280,7 @@ com\pharmacy\app\GUI\Sales\HomeSales2$5.class
 com\pharmacy\app\GUI\Medicine\MedicineDetails$7.class
 com\pharmacy\app\GUI\Sales\SalesPanel$3.class
 com\pharmacy\app\GUI\Employee\EmployeeProfile$4.class
+com\pharmacy\app\DTO\SupplierDTO.class
 com\pharmacy\app\GUI\Employee\UpdateContract$1.class
 com\pharmacy\app\GUI\Sales\HomeSales2$8.class
 com\pharmacy\app\GUI\Promo\AddPromo.class
