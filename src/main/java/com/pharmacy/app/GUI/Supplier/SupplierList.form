@@ -235,31 +235,11 @@
             <Component class="javax.swing.JTable" name="tbSupplierList">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="4" rowCount="4">
-                    <Column editable="true" title="M&#xc3; NCC" type="java.lang.String">
-                      <Data value="NCC1"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                    </Column>
-                    <Column editable="true" title="T&#xca;N NCC" type="java.lang.String">
-                      <Data value="C&#xf4;ng ty TNHH ABC"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                    </Column>
-                    <Column editable="true" title="S&#x1ed0; &#x110;I&#x1ec6;N THO&#x1ea0;I" type="java.lang.String">
-                      <Data value="0123456789"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                    </Column>
-                    <Column editable="true" title="&#x110;&#x1eca;A CH&#x1ec8;" type="java.lang.String">
-                      <Data value="123 &#x110;&#x1b0;&#x1edd;ng 18 P2 Q6 TP.HCM"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                    </Column>
+                  <Table columnCount="4" rowCount="3">
+                    <Column editable="true" title="M&#xc3; NCC" type="java.lang.String"/>
+                    <Column editable="true" title="T&#xca;N NCC" type="java.lang.String"/>
+                    <Column editable="true" title="S&#x1ed0; &#x110;I&#x1ec6;N THO&#x1ea0;I" type="java.lang.String"/>
+                    <Column editable="true" title="&#x110;&#x1eca;A CH&#x1ec8;" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
