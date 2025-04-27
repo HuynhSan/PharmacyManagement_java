@@ -178,6 +178,7 @@ com\pharmacy\app\GUI\Customer\CustomerList$3.class
 com\pharmacy\app\GUI\Sales\HomeSales.class
 com\pharmacy\app\GUI\Employee\AddContract.class
 com\pharmacy\app\GUI\Medicine\UpdateMedicine$6$1.class
+com\pharmacy\app\dao\SupplierDAO.class
 com\pharmacy\app\GUI\Payroll\PayrollDetails$1.class
 com\pharmacy\app\GUI\Employee\EmployeeProfile$5.class
 com\pharmacy\app\GUI\Medicine\MedicineDetails$10$1.class
@@ -281,6 +282,7 @@ com\pharmacy\app\GUI\Sales\HomeSales2$5.class
 com\pharmacy\app\GUI\Medicine\MedicineDetails$7.class
 com\pharmacy\app\GUI\Sales\SalesPanel$3.class
 com\pharmacy\app\GUI\Employee\EmployeeProfile$4.class
+com\pharmacy\app\DTO\SupplierDTO.class
 com\pharmacy\app\GUI\Employee\UpdateContract$1.class
 com\pharmacy\app\GUI\Sales\HomeSales2$8.class
 com\pharmacy\app\GUI\Promo\AddPromo.class
@@ -323,6 +325,7 @@ com\pharmacy\app\GUI\Promo\PromoDetail$3$1.class
 com\pharmacy\app\GUI\Sales\SalesPanel$4.class
 com\pharmacy\app\GUI\Customer\CustomerList$2.class
 com\pharmacy\app\GUI\Medicine\MedicineDetails$6.class
+com\pharmacy\app\BUS\SupplierBUS.class
 com\pharmacy\app\GUI\Importing\POList.class
 com\pharmacy\app\GUI\Employee\EmployeeManagement$7.class
 com\pharmacy\app\GUI\Employee\UpdateEmployee$5.class
